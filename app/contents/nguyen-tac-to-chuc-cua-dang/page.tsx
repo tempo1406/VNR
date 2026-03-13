@@ -1,5 +1,5 @@
-import PrinciplePage from "@/features/principle/PrinciplePage";
+import DuongLoiContentPage from "@/features/contents/DuongLoiContentPage";
 
 export default function PrincipleRoute() {
-  return <PrinciplePage />;
+  return <DuongLoiContentPage sectionNumber={3} />;
 }

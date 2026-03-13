@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { PostType } from "@/common/types/post.type";
 import Link from "next/link";
@@ -7,6 +7,7 @@ import { gsap } from "gsap";
 import { Calendar, ExternalLink, ArrowLeft } from "lucide-react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
+import AudioPlayer from "@/components/AudioPlayer";
 
 interface TimelineDetailPageProps {
   post: PostType;
@@ -69,6 +70,12 @@ const TimelineDetailPage: React.FC<TimelineDetailPageProps> = ({ post }) => {
             <p className="text-white/80 text-xl leading-relaxed">
               {post.shortDescription}
             </p>
+          )}
+
+          {post.audio && (
+            <div className="mt-4">
+              <AudioPlayer src={post.audio} title={post.title} />
+            </div>
           )}
         </div>
 
@@ -191,3 +198,6 @@ const TimelineDetailPage: React.FC<TimelineDetailPageProps> = ({ post }) => {
 };
 
 export default TimelineDetailPage;
+
+
+

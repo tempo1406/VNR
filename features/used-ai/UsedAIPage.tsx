@@ -73,64 +73,6 @@ const aiTools: AITool[] = [
   },
 ];
 
-const referenceLinks = [
-  {
-    title: "Thư mục tài liệu chính",
-    url: "https://drive.google.com/drive/u/1/folders/1oF-H7fpcAPZw7JGKDVIwdICHPJblJTrc",
-  },
-  {
-    title: "Bảo vật quốc gia - Đường Kách Mệnh",
-    url: "https://baotanglichsu.vn/vi/Articles/1001/13639/gioi-thieu-bao-vat-quoc-gia-9-djuong-kach-menh-anh-sang-cho-con-djuong-cach-mang-viet-nam.html",
-  },
-  {
-    title: "Phát hành tác phẩm Đường Kách Mệnh ở Italy",
-    url: "https://baotanghochiminh.vn/phat-hanh-tac-pham-duong-kach-menh-o-italy.htm",
-  },
-  {
-    title: "Tư liệu văn kiện Đại hội III",
-    url: "https://tulieuvankien.dangcongsan.vn/ban-chap-hanh-trung-uong-dang/dai-hoi-dang/lan-thu-iii",
-  },
-  {
-    title: "Dấu ấn Đại hội III",
-    url: "https://nhandan.vn/dau-an-cac-ky-dai-hoi-dai-hoi-iii-xay-dung-cnxh-o-mien-bac-dau-tranh-giai-phong-mien-nam-post445353.html",
-  },
-  {
-    title: "Tư tưởng Hồ Chí Minh về cán bộ và công tác cán bộ",
-    url: "https://tuyengiao.vn/hoc-tap-va-lam-theo-loi-bac/tu-tuong-ho-chi-minh-ve-can-bo-va-cong-tac-can-bo-132338",
-  },
-  {
-    title: "Cán bộ là cái gốc của mọi công việc",
-    url: "https://dangcongsan.vn/tu-tuong-van-hoa/can-bo-la-cai-goc-cua-moi-cong-viec-554476.html",
-  },
-  {
-    title: "Tư tưởng về nhà nước của dân, do dân, vì dân",
-    url: "https://hochiminh.vn/tu-tuong-dao-duc-ho-chi-minh/noi-dung-tu-tuong-dao-duc/tu-tuong-ho-chi-minh-ve-nha-nuoc-cua-dan-do-dan-vi-dan-26",
-  },
-  {
-    title: "Nhà nước pháp quyền của dân",
-    url: "https://tuyenquang.dcs.vn/DetailView/99978/22/Tu-tuong-Ho-Chi-Minh-ve-nha-nuoc-phap-quyen-cua-dan-do-dan-vi-dan.html",
-  },
-  {
-    title: "Xây dựng nhà nước trong Hiến pháp 1946",
-    url: "https://tapchilichsudang.vn/tu-tuong-ho-chi-minh-ve-xay-dung-nha-nuoc-cua-dan-do-dan-vi-dan-trong-hien-phap-nam-1946.html",
-  },
-  {
-    title: "Ảnh tư liệu Quốc hội",
-    url: "https://quochoi.vn/tulieuquochoi/anhtulieu/Pages/anhtulieu.aspx?ItemID=823",
-  },
-  {
-    title: "Kiểm soát quyền lực trong công tác cán bộ",
-    url: "https://dangcongsan.vn/tu-tuong-van-hoa/kiem-soat-quyen-luc-trong-cong-tac-can-bo-theo-tu-tuong-ho-chi-minh-565403.html",
-  },
-  {
-    title: "Phòng chống tham nhũng theo tư tưởng Hồ Chí Minh",
-    url: "https://www.quanlynhanuoc.vn/2024/08/01/phong-chong-tham-nhung-theo-tu-tuong-ho-chi-minh/",
-  },
-  {
-    title: "Bác Hồ nói về tham nhũng và chống tham nhũng",
-    url: "https://tulieuvankien.dangcongsan.vn/c-mac-angghen-lenin-ho-chi-minh/ho-chi-minh/nghien-cuu-hoc-tap-tu-tuong/bac-ho-noi-ve-tham-nhung-va-chong-tham-nhung-2413",
-  },
-];
 
 const UsedAIPage = () => {
   const titleRef = useRef<HTMLHeadingElement>(null);
@@ -306,51 +248,6 @@ const UsedAIPage = () => {
               </div>
             </div>
           ))}
-        </div>
-
-        {/* Reference Links Section */}
-        <div className="mt-16">
-          <h3 className="text-3xl font-bold text-amber-100 mb-6 text-center">
-            Nguồn Tài Liệu Tham Khảo
-          </h3>
-          <p className="text-amber-200/70 text-center mb-8">
-            Các nguồn tài liệu chính thức được sử dụng trong quá trình nghiên
-            cứu
-          </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {referenceLinks.map((link, index) => (
-              <a
-                key={index}
-                href={link.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group flex items-start gap-3 p-4 rounded-xl bg-white/10 hover:bg-white/15 backdrop-blur-md border border-white/20 hover:border-amber-500/50 transition-all duration-300"
-              >
-                <svg
-                  className="w-5 h-5 text-amber-400 flex-shrink-0 mt-0.5"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                  />
-                </svg>
-                <div className="flex-1 min-w-0">
-                  <p className="text-amber-100 group-hover:text-amber-50 transition-colors font-medium">
-                    {link.title}
-                  </p>
-                  <p className="text-amber-300/50 text-xs mt-1 truncate">
-                    {link.url}
-                  </p>
-                </div>
-              </a>
-            ))}
-          </div>
         </div>
 
         {/* Footer Note */}

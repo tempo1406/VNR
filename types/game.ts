@@ -40,7 +40,7 @@ export interface GameState {
   timer: number;
   isPaused: boolean;
   isTimerRunning: boolean;
-  selectedImageId: number; // 1-16 for random puzzle image
+  selectedImageId: number; // 1-4 for random puzzle image
 }
 
 export type FeedbackType = 'correct' | 'wrong' | null;

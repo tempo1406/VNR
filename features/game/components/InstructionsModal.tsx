@@ -78,7 +78,7 @@ export default function InstructionsModal({
                       Màn 1: Trắc nghiệm
                     </h3>
                     <Badge className="bg-amber-500 text-amber-950 text-base px-3 py-1">
-                      9 mảnh
+                      10 mảnh
                     </Badge>
                   </div>
                   <ul className="space-y-3 text-white/90 text-base">
@@ -87,7 +87,8 @@ export default function InstructionsModal({
                         ★
                       </span>
                       <span>
-                        Trả lời câu hỏi trắc nghiệm về tư tưởng Hồ Chí Minh
+                        Trả lời câu hỏi trắc nghiệm về đường lối kháng chiến
+                        toàn quốc (1946 - 1950)
                       </span>
                     </li>
                     <li className="flex items-start gap-3">
@@ -121,7 +122,7 @@ export default function InstructionsModal({
                       Màn 2: Điền từ
                     </h3>
                     <Badge className="bg-amber-500 text-amber-950 text-base px-3 py-1">
-                      9 mảnh
+                      5 mảnh
                     </Badge>
                   </div>
                   <ul className="space-y-3 text-white/90 text-base">
@@ -164,7 +165,7 @@ export default function InstructionsModal({
                       Màn 3: Ghép hình
                     </h3>
                     <Badge className="bg-amber-500 text-amber-950 text-base px-3 py-1">
-                      18 mảnh
+                      15 mảnh
                     </Badge>
                   </div>
                   <ul className="space-y-3 text-white/90 text-base">
@@ -173,7 +174,7 @@ export default function InstructionsModal({
                         ★
                       </span>
                       <span>
-                        Sử dụng 18 mảnh ghép đã thu thập để hoàn thành bức tranh
+                        Sử dụng 15 mảnh ghép đã thu thập để hoàn thành bức tranh
                       </span>
                     </li>
                     <li className="flex items-start gap-3">

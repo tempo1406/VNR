@@ -130,16 +130,16 @@ export default function WelcomeScreen({
           ref={titleRef}
           className="text-5xl md:text-7xl font-bold text-amber-400 mb-6 drop-shadow-2xl"
         >
-          TƯ TƯỞNG HỒ CHÍ MINH
+          ĐƯỜNG LỐI KHÁNG CHIẾN
         </h1>
 
         <h2
           ref={subtitleRef}
           className="text-xl md:text-2xl font-semibold text-white/90 mb-12 px-4 leading-relaxed"
         >
-          Đảng Cộng sản Việt Nam và
+          Toàn quốc kháng chiến và tổ chức thực hiện
           <br />
-          Nhà nước của nhân dân, do nhân dân, vì nhân dân
+          Giai đoạn 1946 - 1950
         </h2>
 
         {/* Main CTA Button */}
@@ -182,7 +182,8 @@ export default function WelcomeScreen({
 
         {/* Game Description */}
         <p className="mt-12 text-white/80 text-lg max-w-2xl mx-auto">
-          Trả lời câu hỏi để thu thập mảnh ghép và hoàn thành bức tranh lịch sử!
+          Trả lời câu hỏi từ tài liệu Đường lối để thu thập mảnh ghép và hoàn
+          thành bức tranh lịch sử!
         </p>
       </div>
     </div>

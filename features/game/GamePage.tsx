@@ -42,22 +42,24 @@ export default function GamePage() {
   }, [state.stage]);
 
   useEffect(() => {
-    if (state.stage === 1 || state.stage === 2) {
-      const stageOffset = state.stage === 1 ? 0 : 9;
-      const piecesInCurrentStage = state.collectedPieces.filter(
-        (p) => p >= stageOffset && p < stageOffset + 9
-      ).length;
+    let transitionTimer: ReturnType<typeof setTimeout> | undefined;
 
-      // Stage 1: need 14 pieces total, Stage 2: need 18 pieces total
-      const requiredPieces = state.stage === 1 ? 14 : 18;
-
-      if (state.collectedPieces.length >= requiredPieces) {
-        setTimeout(() => {
-          nextStage();
-        }, 1500);
-      }
+    if (state.stage === 1 && state.currentQuestionIndex >= 10) {
+      transitionTimer = setTimeout(() => {
+        nextStage();
+      }, 1000);
+    } else if (state.stage === 2 && state.currentQuestionIndex >= 5) {
+      transitionTimer = setTimeout(() => {
+        nextStage();
+      }, 1000);
     }
-  }, [state.collectedPieces, state.stage, nextStage]);
+
+    return () => {
+      if (transitionTimer) {
+        clearTimeout(transitionTimer);
+      }
+    };
+  }, [state.stage, state.currentQuestionIndex, nextStage]);
 
   const handlePlayerNameConfirm = () => {
     setShowPlayerNameModal(false);
@@ -106,9 +108,8 @@ export default function GamePage() {
 
       case 1:
       case 2: {
-        // Check if already have enough pieces for this stage
-        const requiredPieces = state.stage === 1 ? 14 : 18;
-        if (state.collectedPieces.length >= requiredPieces) {
+        const stageQuestionLimit = state.stage === 1 ? 10 : 5;
+        if (state.currentQuestionIndex >= stageQuestionLimit) {
           // Show transitioning message
           return (
             <div className="min-h-screen flex items-center justify-center">
@@ -116,13 +117,16 @@ export default function GamePage() {
                 <h2 className="text-3xl font-bold text-amber-300 mb-4">
                   Đang chuyển màn...
                 </h2>
-                <p className="text-white">Bạn đã thu thập đủ {requiredPieces} mảnh ghép!</p>
+                <p className="text-white">
+                  Bạn đã hoàn thành {stageQuestionLimit} câu hỏi của màn này!
+                </p>
               </div>
             </div>
           );
         }
 
-        const offset = state.stage === 1 ? 0 : 60;
+        const mcCount = state.selectedQuestions.filter((q) => q.type === "MC").length;
+        const offset = state.stage === 1 ? 0 : mcCount;
         const actualIndex = offset + state.currentQuestionIndex;
         const currentQuestion = state.selectedQuestions[actualIndex];
 
@@ -145,7 +149,7 @@ export default function GamePage() {
             <GameHeader
               stage={state.stage}
               collectedPieces={state.collectedPieces.length}
-              totalPieces={18}
+              totalPieces={15}
               correctAnswers={state.correctAnswers}
               wrongAnswers={state.wrongAnswers}
               onPause={handlePause}
@@ -168,7 +172,7 @@ export default function GamePage() {
               <GameHeader
                 stage={3}
                 collectedPieces={state.collectedPieces.length}
-                totalPieces={18}
+                totalPieces={15}
                 correctAnswers={state.correctAnswers}
                 wrongAnswers={state.wrongAnswers}
                 onPause={handlePause}
@@ -191,7 +195,7 @@ export default function GamePage() {
           <VictoryScreen
             correctAnswers={state.correctAnswers}
             wrongAnswers={state.wrongAnswers}
-            totalQuestions={18}
+            totalQuestions={15}
             onPlayAgain={handlePlayAgain}
             onShowLeaderboard={handleShowLeaderboard}
           />

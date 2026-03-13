@@ -1,962 +1,614 @@
 [
   {
     "id": 1,
-    "content": "Theo Hồ Chí Minh trong tác phẩm Đường cách mệnh (1927), cách mạng muốn thành công trước hết phải có gì?",
+    "content": "Ngày 19/12/1946 gắn với sự kiện lịch sử nào của dân tộc Việt Nam?",
     "type": "MC",
     "options": [
-      "A. Quân đội mạnh",
-      "B. Đảng cách mệnh",
-      "C. Vũ khí hiện đại",
-      "D. Đồng minh quốc tế"
+      "A. Ký Hiệp định Sơ bộ",
+      "B. Bùng nổ toàn quốc kháng chiến",
+      "C. Thành lập Đảng Cộng sản Việt Nam",
+      "D. Mở Chiến dịch Biên giới"
     ],
     "correct_answer": "B"
   },
   {
     "id": 2,
-    "content": "Hồ Chí Minh ví Đảng Cộng sản như gì đối với con thuyền cách mạng?",
+    "content": "Trong Lời kêu gọi toàn quốc kháng chiến, Chủ tịch Hồ Chí Minh khẳng định tinh thần nào?",
     "type": "MC",
     "options": [
-      "A. Thủy thủ đoàn",
-      "B. Người cầm lái",
-      "C. Cánh buồm",
-      "D. La bàn"
+      "A. Nhân nhượng vô điều kiện",
+      "B. Thà hy sinh tất cả chứ không chịu mất nước",
+      "C. Chỉ đấu tranh ngoại giao",
+      "D. Tạm đình chiến lâu dài"
     ],
     "correct_answer": "B"
   },
   {
     "id": 3,
-    "content": "Theo Hồ Chí Minh, sự ra đời của Đảng Cộng sản Việt Nam là kết quả của sự kết hợp chủ nghĩa Mác-Lênin với phong trào công nhân và thêm yếu tố nào nữa?",
+    "content": "Theo tài liệu, cuộc kháng chiến toàn quốc bắt đầu nổ súng vào thời điểm nào?",
     "type": "MC",
     "options": [
-      "A. Phong trào nông dân",
-      "B. Phong trào yêu nước",
-      "C. Phong trào trí thức",
-      "D. Phong trào tư sản"
+      "A. 6 giờ sáng 19/12/1946",
+      "B. 12 giờ trưa 19/12/1946",
+      "C. 20 giờ ngày 19/12/1946",
+      "D. 0 giờ ngày 20/12/1946"
     ],
-    "correct_answer": "B"
+    "correct_answer": "C"
   },
   {
     "id": 4,
-    "content": "Năm 1960, Hồ Chí Minh khẳng định: “Đảng ta là đạo đức, là …”?",
+    "content": "Tại Hà Nội, đơn vị nào bắn loạt đại bác đầu tiên báo hiệu kháng chiến?",
     "type": "MC",
     "options": [
-      "A. Văn minh",
-      "B. Trong sạch",
-      "C. Vững mạnh",
-      "D. Tiên phong"
+      "A. Pháo đài Láng",
+      "B. Thành cổ Sơn Tây",
+      "C. Cầu Long Biên",
+      "D. Chợ Đồng Xuân"
     ],
     "correct_answer": "A"
   },
   {
     "id": 5,
-    "content": "Hồ Chí Minh gọi tham ô, lãng phí, quan liêu là gì?",
+    "content": "Cuộc chiến đấu tại mặt trận Hà Nội diễn ra liên tục trong bao lâu?",
     "type": "MC",
     "options": [
-      "A. Giặc ngoại xâm",
-      "B. Giặc nội xâm",
-      "C. Bệnh thành tích",
-      "D. Bệnh hình thức"
+      "A. 30 ngày đêm",
+      "B. 45 ngày đêm",
+      "C. 60 ngày đêm",
+      "D. 90 ngày đêm"
     ],
-    "correct_answer": "B"
+    "correct_answer": "C"
   },
   {
     "id": 6,
-    "content": "Theo Hồ Chí Minh, Nhà nước Việt Nam mang bản chất giai cấp nào?",
+    "content": "Mục tiêu trực tiếp của cuộc kháng chiến chống thực dân Pháp là gì?",
     "type": "MC",
     "options": [
-      "A. Giai cấp nông dân",
-      "B. Giai cấp công nhân",
-      "C. Toàn dân (phi giai cấp)",
-      "D. Liên minh công-nông"
+      "A. Mở rộng thương mại quốc tế",
+      "B. Bảo vệ độc lập, tự do và thống nhất",
+      "C. Thành lập liên bang Đông Dương",
+      "D. Chuyển sang phát triển công nghiệp"
     ],
     "correct_answer": "B"
   },
   {
     "id": 7,
-    "content": "Tất cả quyền lực trong Nhà nước Việt Nam Dân chủ Cộng hòa thuộc về ai?",
+    "content": "Đường lối kháng chiến của Đảng giai đoạn 1946-1950 gồm nội dung nào sau đây?",
     "type": "MC",
     "options": [
-      "A. Quốc hội",
-      "B. Chính phủ",
-      "C. Nhân dân",
-      "D. Đảng"
+      "A. Toàn dân, toàn diện, lâu dài, dựa vào sức mình là chính",
+      "B. Đánh nhanh thắng nhanh bằng chủ lực",
+      "C. Chủ yếu dựa vào viện trợ bên ngoài",
+      "D. Tạm hòa hoãn vô thời hạn"
+    ],
+    "correct_answer": "A"
+  },
+  {
+    "id": 8,
+    "content": "Kháng chiến toàn dân được hiểu đúng nhất là gì?",
+    "type": "MC",
+    "options": [
+      "A. Chỉ lực lượng vũ trang tham gia",
+      "B. Chỉ nhân dân vùng tự do tham gia",
+      "C. Huy động toàn bộ sức dân, tài dân, lực dân",
+      "D. Chỉ thanh niên tham gia"
     ],
     "correct_answer": "C"
   },
   {
-    "id": 8,
-    "content": "Hồ Chí Minh gọi cán bộ nhà nước là gì của nhân dân?",
-    "type": "MC",
-    "options": [
-      "A. Người lãnh đạo",
-      "B. Công bộc",
-      "C. Quan cách mạng",
-      "D. Đại biểu"
-    ],
-    "correct_answer": "B"
-  },
-  {
     "id": 9,
-    "content": "Nguyên tắc tổ chức cơ bản của Đảng theo Hồ Chí Minh là gì?",
+    "content": "Kháng chiến toàn diện là đánh địch trên những lĩnh vực nào?",
     "type": "MC",
     "options": [
-      "A. Dân chủ tập trung",
-      "B. Tập trung dân chủ",
-      "C. Tập thể lãnh đạo",
-      "D. Cá nhân phụ trách"
+      "A. Chỉ quân sự",
+      "B. Quân sự, chính trị, kinh tế, văn hóa, tư tưởng, ngoại giao",
+      "C. Chỉ kinh tế và ngoại giao",
+      "D. Chỉ chính trị và tuyên truyền"
     ],
     "correct_answer": "B"
   },
   {
     "id": 10,
-    "content": "Để Đảng xứng đáng là người lãnh đạo và đầy tớ trung thành của nhân dân, Hồ Chí Minh nhấn mạnh Đảng phải thường xuyên làm gì?",
+    "content": "Trong đường lối kháng chiến, tư tưởng chỉ đạo chiến lược là gì?",
     "type": "MC",
     "options": [
-      "A. Tăng đảng viên",
-      "B. Tự chỉnh đốn",
-      "C. Mở rộng quốc tế",
-      "D. Tăng ngân sách"
+      "A. Kháng chiến ngắn ngày",
+      "B. Chờ viện trợ là chính",
+      "C. Trường kỳ kháng chiến",
+      "D. Đình chiến để đàm phán"
     ],
-    "correct_answer": "B"
+    "correct_answer": "C"
   },
   {
     "id": 11,
-    "content": "Ngày 3-9-1945, tại phiên họp đầu tiên của Chính phủ lâm thời, Hồ Chí Minh đề nghị tổ chức sớm cuộc gì?",
+    "content": "Nội dung nào thể hiện tinh thần độc lập tự chủ trong kháng chiến?",
     "type": "MC",
     "options": [
-      "A. Soạn thảo Hiến pháp",
-      "B. Tổng tuyển cử",
-      "C. Thành lập Quốc hội",
-      "D. Kháng chiến"
+      "A. Dựa hoàn toàn vào quốc tế",
+      "B. Dựa vào sức mình là chính",
+      "C. Chỉ dựa vào hậu phương đô thị",
+      "D. Chỉ dựa vào chiến tranh chính quy"
     ],
     "correct_answer": "B"
   },
   {
     "id": 12,
-    "content": "Cuộc Tổng tuyển cử đầu tiên ở Việt Nam diễn ra vào ngày nào?",
+    "content": "Ngày 12/12/1946, Trung ương Đảng ban hành chỉ thị nào?",
     "type": "MC",
     "options": [
-      "A. 2-9-1945",
-      "B. 6-1-1946",
-      "C. 2-3-1946",
-      "D. 9-5-1950"
+      "A. Kháng chiến kiến quốc",
+      "B. Hòa để tiến",
+      "C. Toàn dân kháng chiến",
+      "D. Tình hình và chủ trương"
     ],
-    "correct_answer": "B"
+    "correct_answer": "C"
   },
   {
     "id": 13,
-    "content": "Hồ Chí Minh gọi pháp quyền của Nhà nước ta là pháp quyền gì?",
+    "content": "Hội nghị Ban Thường vụ Trung ương Đảng (mở rộng) ngày 18/12/1946 họp tại đâu?",
     "type": "MC",
     "options": [
-      "A. Xã hội chủ nghĩa",
-      "B. Nhân nghĩa",
-      "C. Dân chủ",
-      "D. Khoa học"
+      "A. Tân Trào",
+      "B. Làng Vạn Phúc, Hà Đông",
+      "C. Pác Bó",
+      "D. Việt Trì"
     ],
     "correct_answer": "B"
   },
   {
     "id": 14,
-    "content": "Để kiểm soát quyền lực Nhà nước, Hồ Chí Minh nhấn mạnh vai trò kiểm soát đầu tiên thuộc về tổ chức nào?",
+    "content": "Khẩu hiệu chiến đấu nổi bật của quân dân Hà Nội là gì?",
     "type": "MC",
     "options": [
-      "A. Quốc hội",
-      "B. Nhân dân",
-      "C. Đảng Cộng sản Việt Nam",
-      "D. Mặt trận Tổ quốc"
+      "A. Tất cả vì tiền tuyến",
+      "B. Quyết tử cho Tổ quốc quyết sinh",
+      "C. Không có gì quý hơn độc lập tự do",
+      "D. Thần tốc, táo bạo, bất ngờ"
     ],
-    "correct_answer": "C"
+    "correct_answer": "B"
   },
   {
     "id": 15,
-    "content": "Ngày 26-1-1946, Hồ Chí Minh ký lệnh quy định mức phạt cao nhất cho tội tham ô là gì?",
+    "content": "Trung đoàn Thủ đô rút ra ngoài thành phố vào thời điểm nào?",
     "type": "MC",
     "options": [
-      "A. Tử hình",
-      "B. Chung thân",
-      "C. 20 năm tù",
-      "D. Phạt tiền gấp đôi"
+      "A. 17/2/1947",
+      "B. 19/12/1946",
+      "C. 15/10/1947",
+      "D. 1/1/1948"
     ],
     "correct_answer": "A"
   },
   {
     "id": 16,
-    "content": "Hiến pháp nào khẳng định “Nhà nước của ta là Nhà nước dân chủ nhân dân, dựa trên nền tảng liên minh công nông, do giai cấp công nhân lãnh đạo”?",
+    "content": "Hội nghị cán bộ Trung ương ngày 6/4/1947 nhấn mạnh nhiệm vụ nào?",
     "type": "MC",
     "options": [
-      "A. 1946",
-      "B. 1959",
-      "C. 1980",
-      "D. 1992"
+      "A. Giảm quân số",
+      "B. Mở rộng mặt trận dân tộc thống nhất và phát triển du kích",
+      "C. Rút khỏi vùng tạm chiếm",
+      "D. Dừng phát triển Đảng"
     ],
     "correct_answer": "B"
   },
   {
     "id": 17,
-    "content": "Hồ Chí Minh nói ngay sau thắng lợi chống Mỹ cần làm việc gì trước tiên?",
+    "content": "Đợt phát triển đảng viên mới năm 1947 có tên gọi là gì?",
     "type": "MC",
     "options": [
-      "A. Xây dựng kinh tế",
-      "B. Chỉnh đốn lại Đảng",
-      "C. Thống nhất đất nước",
-      "D. Cải cách ruộng đất"
+      "A. Lớp Thống Nhất",
+      "B. Lớp Mùa Xuân",
+      "C. Lớp Tháng Tám",
+      "D. Lớp Kháng Chiến"
     ],
-    "correct_answer": "B"
+    "correct_answer": "C"
   },
   {
     "id": 18,
-    "content": "Năm 1919, Hồ Chí Minh gửi Yêu sách của nhân dân An Nam đến Hội nghị nào?",
+    "content": "Cuối năm 1947, tổng số đảng viên toàn Đảng khoảng bao nhiêu?",
     "type": "MC",
     "options": [
-      "A. Genève",
-      "B. Véc-xây",
-      "C. Potsdam",
-      "D. Yalta"
+      "A. Hơn 30.000",
+      "B. Hơn 50.000",
+      "C. Hơn 70.000",
+      "D. Hơn 100.000"
     ],
-    "correct_answer": "B"
+    "correct_answer": "C"
   },
   {
     "id": 19,
-    "content": "Hồ Chí Minh hai lần đứng đầu Ủy ban soạn thảo Hiến pháp vào các năm nào?",
+    "content": "Theo tài liệu, bộ đội chính quy cuối năm 1947 phát triển lên khoảng bao nhiêu?",
     "type": "MC",
     "options": [
-      "A. 1945 và 1950",
-      "B. 1946 và 1959",
-      "C. 1959 và 1980",
-      "D. 1946 và 1960"
+      "A. Hơn 6 vạn",
+      "B. Hơn 9 vạn",
+      "C. Hơn 12 vạn",
+      "D. Hơn 20 vạn"
+    ],
+    "correct_answer": "C"
+  },
+  {
+    "id": 20,
+    "content": "Lực lượng dân quân tự vệ cuối năm 1947 phát triển lên khoảng bao nhiêu người?",
+    "type": "MC",
+    "options": [
+      "A. Khoảng 500.000",
+      "B. Hơn 1 triệu",
+      "C. Hơn 2 triệu",
+      "D. Hơn 3 triệu"
     ],
     "correct_answer": "B"
   },
   {
-    "id": 20,
-    "content": "Nguyên tắc “tập thể lãnh đạo, cá nhân phụ trách” cần tránh hai khuynh hướng nào?",
-    "type": "MC",
-    "options": [
-      "A. Độc đoán và dựa dẫm",
-      "B. Dân chủ và tập trung",
-      "C. Kỷ luật và khoan hồng",
-      "D. Phê bình và tự phê bình"
-    ],
-    "correct_answer": "A"
-  },
-  {
     "id": 21,
-    "content": "Hồ Chí Minh lập tổ chức nào vào năm 1925?",
+    "content": "Thu - Đông 1947, thực dân Pháp huy động khoảng bao nhiêu quân tấn công Việt Bắc?",
     "type": "MC",
     "options": [
-      "A. Hội Việt Nam Cách mệnh Thanh niên",
-      "B. Tân Việt Cách mệnh Đảng",
-      "C. Đông Dương Cộng sản Đảng",
-      "D. Việt Nam Quốc dân Đảng"
+      "A. 10.000 quân",
+      "B. 12.000 quân",
+      "C. 15.000 quân",
+      "D. 20.000 quân"
     ],
-    "correct_answer": "A"
+    "correct_answer": "C"
   },
   {
     "id": 22,
-    "content": "Bài báo cuối đời của Hồ Chí Minh (3-2-1969) có tiêu đề gì?",
+    "content": "Ngày 15/10/1947, Ban Thường vụ Trung ương ra chỉ thị nào?",
     "type": "MC",
     "options": [
-      "A. Đạo đức cách mạng",
-      "B. Nâng cao đạo đức cách mạng, quét sạch chủ nghĩa cá nhân",
-      "C. Sửa đổi lối làm việc",
-      "D. Di chúc"
+      "A. Tăng gia sản xuất",
+      "B. Phải phá tan cuộc tấn công mùa đông của giặc Pháp",
+      "C. Kháng chiến kiến quốc",
+      "D. Tổng động viên"
     ],
     "correct_answer": "B"
   },
   {
     "id": 23,
-    "content": "Hồ Chí Minh nói: “Cán bộ là gốc của mọi công việc, muôn việc thành công hay thất bại đều do cán bộ tốt hay …”?",
+    "content": "Sau bao nhiêu ngày đêm, quân dân ta bẻ gãy cuộc tấn công Việt Bắc Thu - Đông 1947?",
     "type": "MC",
     "options": [
-      "A. kém",
-      "B. nhiều",
-      "C. ít",
-      "D. trung thành"
+      "A. 45 ngày đêm",
+      "B. 60 ngày đêm",
+      "C. 75 ngày đêm",
+      "D. 90 ngày đêm"
     ],
-    "correct_answer": "A"
+    "correct_answer": "C"
   },
   {
     "id": 24,
-    "content": "Nhà nước Việt Nam Dân chủ Cộng hòa là Nhà nước dân chủ nhân dân đầu tiên ở đâu?",
+    "content": "Ngày 11/6/1948 gắn với sự kiện nào?",
     "type": "MC",
     "options": [
-      "A. Châu Á",
-      "B. Đông Nam châu Á",
-      "C. Đông Dương",
-      "D. Thế giới"
+      "A. Ký Sắc lệnh nghĩa vụ quân sự",
+      "B. Lời kêu gọi Thi đua ái quốc",
+      "C. Mở Chiến dịch Biên giới",
+      "D. Thành lập Chính phủ Liên hiệp"
     ],
     "correct_answer": "B"
   },
   {
     "id": 25,
-    "content": "Để xây dựng Đảng trong sạch hiện nay, cái thiếu nhất theo Hồ Chí Minh là sự thống nhất giữa gì và gì?",
+    "content": "Hội nghị Văn hóa toàn quốc tháng 7/1948 xác định nền văn hóa mới có tính chất gì?",
     "type": "MC",
     "options": [
-      "A. Lý luận và thực tiễn",
-      "B. Nói và làm",
-      "C. Đảng và dân",
-      "D. Trung ương và địa phương"
+      "A. Dân tộc, khoa học, đại chúng",
+      "B. Hiện đại, công nghiệp, quốc tế",
+      "C. Truyền thống, tôn giáo, dân sự",
+      "D. Quân sự, chính trị, kinh tế"
     ],
-    "correct_answer": "B"
+    "correct_answer": "A"
   },
   {
     "id": 26,
-    "content": "Theo Hồ Chí Minh, Đảng Cộng sản Việt Nam là Đảng của lực lượng nào?",
+    "content": "Sự kiện quốc tế nào ngày 1/10/1949 có lợi lớn cho cách mạng Việt Nam?",
     "type": "MC",
     "options": [
-      "A. Giai cấp công nhân",
-      "B. Giai cấp công nhân, nhân dân lao động và dân tộc Việt Nam",
-      "C. Giai cấp nông dân",
-      "D. Trí thức và tư sản dân tộc"
+      "A. Liên Hợp Quốc thành lập",
+      "B. Nhà nước Cộng hòa nhân dân Trung Hoa ra đời",
+      "C. Pháp rút quân khỏi Đông Dương",
+      "D. Mỹ công nhận Việt Nam Dân chủ Cộng hòa"
     ],
     "correct_answer": "B"
   },
   {
     "id": 27,
-    "content": "Trong xã hội thuộc địa nửa phong kiến, mâu thuẫn cơ bản ở Việt Nam theo Hồ Chí Minh là giữa lực lượng nào với đế quốc xâm lược và tay sai?",
+    "content": "Đầu năm 1950, quốc gia nào công nhận và đặt quan hệ ngoại giao với Việt Nam Dân chủ Cộng hòa trước?",
     "type": "MC",
     "options": [
-      "A. Giai cấp công nhân",
-      "B. Giai cấp nông dân",
-      "C. Toàn thể dân tộc Việt Nam",
-      "D. Trí thức tiểu tư sản"
+      "A. Liên Xô",
+      "B. Trung Quốc",
+      "C. Triều Tiên",
+      "D. Mianma"
+    ],
+    "correct_answer": "B"
+  },
+  {
+    "id": 28,
+    "content": "Theo tài liệu, Liên Xô công nhận và đặt quan hệ ngoại giao với Việt Nam Dân chủ Cộng hòa vào thời điểm nào?",
+    "type": "MC",
+    "options": [
+      "A. 18/1/1950",
+      "B. 2/1950",
+      "C. 30/1/1950",
+      "D. 3/1950"
     ],
     "correct_answer": "C"
   },
   {
-    "id": 28,
-    "content": "Hồ Chí Minh khẳng định Đảng Cộng sản Việt Nam giữ vai trò lãnh đạo trong những giai đoạn cách mạng nào?",
-    "type": "MC",
-    "options": [
-      "A. Cách mạng dân tộc dân chủ nhân dân và cách mạng xã hội chủ nghĩa",
-      "B. Chỉ trong kháng chiến chống ngoại xâm",
-      "C. Chỉ trong xây dựng hòa bình",
-      "D. Chỉ trong cải cách kinh tế"
-    ],
-    "correct_answer": "A"
-  },
-  {
     "id": 29,
-    "content": "Đặc điểm nổi bật làm cho Đảng Cộng sản Việt Nam trở thành “Đảng đạo đức, Đảng văn minh” là gì?",
+    "content": "Trong quan hệ với Lào và Campuchia, Đảng chủ trương gì?",
     "type": "MC",
     "options": [
-      "A. Đề ra nhiều khẩu hiệu",
-      "B. Luôn gắn bó mật thiết với nhân dân",
-      "C. Có nhiều đảng viên",
-      "D. Có nhiều cán bộ trí thức"
+      "A. Trung lập hoàn toàn",
+      "B. Mở rộng mặt trận Lào - Miên, đoàn kết chiến đấu",
+      "C. Chỉ hỗ trợ ngoại giao",
+      "D. Rút toàn bộ cán bộ hỗ trợ"
     ],
     "correct_answer": "B"
   },
   {
     "id": 30,
-    "content": "Theo Hồ Chí Minh, một trong những biểu hiện suy thoái nguy hiểm trong Đảng là chủ nghĩa gì?",
+    "content": "Tháng 11/1949, Chủ tịch Hồ Chí Minh ký ban hành sắc lệnh gì?",
     "type": "MC",
     "options": [
-      "A. Chủ nghĩa dân tộc",
-      "B. Chủ nghĩa cá nhân",
-      "C. Chủ nghĩa tập thể",
-      "D. Chủ nghĩa quốc tế"
+      "A. Sắc lệnh giảm tô",
+      "B. Sắc lệnh nghĩa vụ quân sự",
+      "C. Sắc lệnh cải cách giáo dục",
+      "D. Sắc lệnh về tiền tệ"
     ],
     "correct_answer": "B"
   },
   {
     "id": 31,
-    "content": "Theo Hồ Chí Minh, Đảng phải dựa vào cái gì để chống chủ nghĩa cá nhân?",
+    "content": "Đầu năm 1950, số lượng bộ đội ta tăng lên khoảng bao nhiêu?",
     "type": "MC",
     "options": [
-      "A. Đạo đức cách mạng",
-      "B. Kỷ luật thép",
-      "C. Pháp luật nhà nước",
-      "D. Truyền thống gia đình"
+      "A. 12 vạn",
+      "B. 18 vạn",
+      "C. 23 vạn",
+      "D. 30 vạn"
     ],
-    "correct_answer": "A"
+    "correct_answer": "C"
   },
   {
     "id": 32,
-    "content": "Nguyên tắc nào sau đây là nguyên tắc tổ chức cơ bản của Đảng theo tư tưởng Hồ Chí Minh?",
+    "content": "Đầu năm 1950, số dân quân tự vệ và du kích theo tài liệu là bao nhiêu?",
     "type": "MC",
     "options": [
-      "A. Phê bình và tự phê bình",
-      "B. Tập trung dân chủ",
-      "C. Đoàn kết thống nhất",
-      "D. Kỷ luật nghiêm minh"
+      "A. 1 triệu",
+      "B. 2 triệu",
+      "C. 3 triệu",
+      "D. 4 triệu"
     ],
-    "correct_answer": "B"
+    "correct_answer": "C"
   },
   {
     "id": 33,
-    "content": "Theo Hồ Chí Minh, tự phê bình và phê bình có ý nghĩa gì đối với Đảng?",
+    "content": "Ngày 9/1/1950, sự kiện nào diễn ra tại Sài Gòn - Chợ Lớn?",
     "type": "MC",
     "options": [
-      "A. Cách tốt nhất để củng cố đoàn kết, thống nhất trong Đảng",
-      "B. Hình thức kiểm điểm cuối năm",
-      "C. Phương tiện kỷ luật cá nhân",
-      "D. Cách để hoàn thành chỉ tiêu thi đua"
+      "A. Tổng tuyển cử",
+      "B. Hơn 500.000 người biểu tình chống Mỹ",
+      "C. Học sinh, sinh viên biểu tình và Trần Văn Ơn hy sinh",
+      "D. Mở chiến dịch lớn ở Nam Bộ"
     ],
-    "correct_answer": "A"
+    "correct_answer": "C"
   },
   {
     "id": 34,
-    "content": "Hồ Chí Minh coi đoàn kết là gì đối với mọi thắng lợi của cách mạng Việt Nam?",
+    "content": "Ngày 19/3/1950, hơn 500.000 người dân Sài Gòn biểu tình để phản đối lực lượng nào?",
     "type": "MC",
     "options": [
-      "A. Nguồn gốc mọi thắng lợi",
-      "B. Điều kiện cần nhưng không đủ",
-      "C. Yếu tố tinh thần phụ trợ",
-      "D. Vấn đề thứ yếu"
+      "A. Quân đội Nhật",
+      "B. Quân đội Mỹ",
+      "C. Quân đội Anh",
+      "D. Quân đội Trung Hoa Dân quốc"
     ],
-    "correct_answer": "A"
+    "correct_answer": "B"
   },
   {
     "id": 35,
-    "content": "Theo Hồ Chí Minh, Nhà nước ta mang bản chất giai cấp công nhân nhưng đồng thời có tính gì?",
+    "content": "Tháng 6/1950, Ban Thường vụ Trung ương Đảng quyết định mở chiến dịch nào?",
     "type": "MC",
     "options": [
-      "A. Tính nhân dân và tính dân tộc",
-      "B. Tính tôn giáo và tính dân tộc",
-      "C. Tính cá nhân và tính giai cấp",
-      "D. Tính tư sản và tính dân tộc"
+      "A. Chiến dịch Điện Biên Phủ",
+      "B. Chiến dịch Việt Bắc",
+      "C. Chiến dịch Biên giới Thu - Đông 1950",
+      "D. Chiến dịch Tây Bắc"
     ],
-    "correct_answer": "A"
+    "correct_answer": "C"
   },
   {
     "id": 36,
-    "content": "Nhà nước Việt Nam Dân chủ Cộng hòa ra đời là kết quả của quá trình gì?",
+    "content": "Chiến dịch Biên giới Thu - Đông 1950 diễn ra trong khoảng thời gian nào?",
     "type": "MC",
     "options": [
-      "A. Cuộc đấu tranh lâu dài, gian khổ của toàn dân tộc",
-      "B. Quyết định của các nước lớn",
-      "C. Thỏa thuận giữa các giai cấp",
-      "D. Chính sách cải cách hành chính"
+      "A. 1/9 đến 30/9/1950",
+      "B. 16/9 đến 17/10/1950",
+      "C. 19/12/1950 đến 19/1/1951",
+      "D. 1/10 đến 1/11/1950"
     ],
-    "correct_answer": "A"
+    "correct_answer": "B"
   },
   {
     "id": 37,
-    "content": "Theo Hồ Chí Minh, trong Nhà nước dân chủ, cơ quan quyền lực nhà nước cao nhất là cơ quan nào?",
+    "content": "Mục tiêu quan trọng của Chiến dịch Biên giới 1950 là gì?",
     "type": "MC",
     "options": [
-      "A. Quốc hội",
-      "B. Chính phủ",
-      "C. Chủ tịch nước",
-      "D. Tòa án nhân dân tối cao"
+      "A. Tấn công thẳng vào Hà Nội",
+      "B. Mở rộng căn cứ và khai thông biên giới Việt - Trung",
+      "C. Đổ bộ vào Nam Bộ",
+      "D. Tiến công Campuchia"
     ],
-    "correct_answer": "A"
+    "correct_answer": "B"
   },
   {
     "id": 38,
-    "content": "“Nhà nước của dân” trong tư tưởng Hồ Chí Minh được hiểu chính xác nhất là gì?",
+    "content": "Chiến thắng Biên giới Thu - Đông 1950 có ý nghĩa chiến lược nào?",
     "type": "MC",
     "options": [
-      "A. Dân là chủ, mọi quyền lực thuộc về nhân dân",
-      "B. Dân được Nhà nước chăm lo phúc lợi",
-      "C. Dân chỉ tham gia bầu cử 5 năm một lần",
-      "D. Dân có thể góp ý khi được mời"
+      "A. Kết thúc ngay chiến tranh",
+      "B. Đưa kháng chiến chuyển sang giai đoạn phát triển cao hơn",
+      "C. Chấm dứt mọi hoạt động ngoại giao",
+      "D. Thu hẹp căn cứ Việt Bắc"
     ],
-    "correct_answer": "A"
+    "correct_answer": "B"
   },
   {
     "id": 39,
-    "content": "“Nhà nước do dân” được Hồ Chí Minh giải thích chủ yếu thông qua chế độ nào?",
+    "content": "Theo đường lối của Đảng, yếu tố quan trọng hàng đầu trong kháng chiến là gì?",
     "type": "MC",
     "options": [
-      "A. Thi tuyển công chức",
-      "B. Bầu cử và bãi miễn",
-      "C. Bổ nhiệm từ trên xuống",
-      "D. Thỉnh nguyện thư"
+      "A. Độc lập, tự chủ về đường lối",
+      "B. Dự trữ ngoại tệ",
+      "C. Mua sắm vũ khí hiện đại",
+      "D. Tranh thủ thương mại"
     ],
-    "correct_answer": "B"
+    "correct_answer": "A"
   },
   {
     "id": 40,
-    "content": "“Nhà nước vì dân” theo Hồ Chí Minh được hiểu đúng nhất là:",
+    "content": "Nhận định nào đúng về vai trò của đường lối kháng chiến 1946-1950?",
     "type": "MC",
     "options": [
-      "A. Việc gì có lợi cho dân thì phải hết sức làm",
-      "B. Ưu tiên lợi ích của cán bộ, đảng viên",
-      "C. Chỉ tập trung phát triển kinh tế",
-      "D. Tăng cường thu thuế để có ngân sách"
+      "A. Chỉ có giá trị quân sự",
+      "B. Không được nhân dân ủng hộ",
+      "C. Trở thành ngọn cờ dẫn đường, góp phần quyết định thắng lợi",
+      "D. Chỉ áp dụng ở Bắc Bộ"
     ],
-    "correct_answer": "A"
+    "correct_answer": "C"
   },
   {
     "id": 41,
-    "content": "Trong tư tưởng Hồ Chí Minh, hình thức dân chủ nào được coi là “hoàn bị” nhất?",
-    "type": "MC",
-    "options": [
-      "A. Dân chủ trực tiếp",
-      "B. Dân chủ đại diện",
-      "C. Dân chủ tập trung",
-      "D. Dân chủ nghị trường"
-    ],
-    "correct_answer": "A"
+    "content": "“Chúng ta thà hy sinh tất cả, chứ nhất định không chịu mất nước, nhất định không chịu làm _______.”",
+    "type": "text",
+    "correct_answer": "nô lệ"
   },
   {
     "id": 42,
-    "content": "Một trong những phương thức quan trọng để nhân dân thực hiện quyền làm chủ nhà nước là gì?",
-    "type": "MC",
-    "options": [
-      "A. Bầu cử và bãi miễn đại biểu",
-      "B. Khiếu nại qua báo chí",
-      "C. Phản ánh trên mạng xã hội",
-      "D. Gửi thư riêng cho lãnh đạo"
-    ],
-    "correct_answer": "A"
+    "content": "“Hỡi đồng bào! Chúng ta phải _______!”",
+    "type": "text",
+    "correct_answer": "đứng lên"
   },
   {
     "id": 43,
-    "content": "Theo Hồ Chí Minh, cán bộ, công chức là gì của nhân dân?",
-    "type": "MC",
-    "options": [
-      "A. Người đại diện",
-      "B. Công bộc, đầy tớ trung thành",
-      "C. Cán bộ lãnh đạo",
-      "D. Cán bộ quản lý"
-    ],
-    "correct_answer": "B"
+    "content": "“Mỗi người dân là một _______.”",
+    "type": "text",
+    "correct_answer": "chiến sĩ"
   },
   {
     "id": 44,
-    "content": "Hồ Chí Minh nhấn mạnh: “Nếu Chính phủ làm hại dân thì dân có quyền … Chính phủ”. Nội dung đó thể hiện điều gì?",
-    "type": "MC",
-    "options": [
-      "A. Nhân dân có quyền kiểm soát, bãi miễn chính quyền",
-      "B. Nhân dân có quyền chống lại mọi quyết định",
-      "C. Nhân dân có quyền bỏ phiếu trắng",
-      "D. Nhân dân có quyền không nộp thuế"
-    ],
-    "correct_answer": "A"
+    "content": "“Mỗi làng xã là một _______.”",
+    "type": "text",
+    "correct_answer": "pháo đài"
   },
   {
     "id": 45,
-    "content": "Trong quản lý xã hội, Hồ Chí Minh yêu cầu Nhà nước phải quản lý chủ yếu bằng gì?",
-    "type": "MC",
-    "options": [
-      "A. Truyền thống, tập quán",
-      "B. Mệnh lệnh hành chính",
-      "C. Hiến pháp và pháp luật",
-      "D. Dư luận xã hội"
-    ],
-    "correct_answer": "C"
-  },
-  {
-    "id": 46,
-    "content": "Câu nói “trăm điều phải có thần linh pháp quyền” nhấn mạnh điều gì?",
-    "type": "MC",
-    "options": [
-      "A. Vai trò tối thượng của pháp luật",
-      "B. Vai trò của tôn giáo",
-      "C. Vai trò của phong tục",
-      "D. Vai trò của đạo đức cá nhân"
-    ],
-    "correct_answer": "A"
-  },
-  {
-    "id": 47,
-    "content": "Theo Hồ Chí Minh, “pháp quyền nhân nghĩa” trước hết là Nhà nước phải tôn trọng và bảo đảm điều gì?",
-    "type": "MC",
-    "options": [
-      "A. Quyền con người và quyền công dân",
-      "B. Lợi ích của giai cấp cầm quyền",
-      "C. Quyền của doanh nghiệp",
-      "D. Quyền của cán bộ lãnh đạo"
-    ],
-    "correct_answer": "A"
-  },
-  {
-    "id": 48,
-    "content": "Theo Hồ Chí Minh, pháp luật trong Nhà nước ta phải kết hợp hai yếu tố nào?",
-    "type": "MC",
-    "options": [
-      "A. Nghiêm minh và nhân văn",
-      "B. Khắt khe và tuyệt đối",
-      "C. Linh hoạt và tùy tiện",
-      "D. Kín đáo và bí mật"
-    ],
-    "correct_answer": "A"
-  },
-  {
-    "id": 49,
-    "content": "Hồ Chí Minh gọi tham ô, lãng phí, quan liêu là gì đối với chế độ mới?",
-    "type": "MC",
-    "options": [
-      "A. Giặc nội xâm",
-      "B. Thói xấu cá nhân",
-      "C. Sai lầm nhỏ",
-      "D. Khuyết điểm tạm thời"
-    ],
-    "correct_answer": "A"
-  },
-  {
-    "id": 50,
-    "content": "Theo Hồ Chí Minh, bệnh nào là “bệnh gốc” sinh ra tham ô, lãng phí?",
-    "type": "MC",
-    "options": [
-      "A. Bệnh hình thức",
-      "B. Bệnh chủ quan",
-      "C. Bệnh quan liêu",
-      "D. Bệnh vô cảm"
-    ],
-    "correct_answer": "C"
-  },
-  {
-    "id": 51,
-    "content": "Hồ Chí Minh nêu mấy chiều kiểm soát trong Đảng và Nhà nước?",
-    "type": "MC",
-    "options": [
-      "A. Hai chiều: từ trên xuống và từ dưới lên",
-      "B. Một chiều: từ trên xuống",
-      "C. Một chiều: từ dưới lên",
-      "D. Ba chiều: trên, dưới và ngang"
-    ],
-    "correct_answer": "A"
-  },
-  {
-    "id": 52,
-    "content": "Đảng Cộng sản Việt Nam kiểm soát quyền lực nhà nước chủ yếu thông qua công tác nào?",
-    "type": "MC",
-    "options": [
-      "A. Công tác kiểm tra, giám sát",
-      "B. Công tác tuyên truyền",
-      "C. Công tác tổ chức lễ kỷ niệm",
-      "D. Công tác thi đua khen thưởng"
-    ],
-    "correct_answer": "A"
-  },
-  {
-    "id": 53,
-    "content": "Theo Hồ Chí Minh, lực lượng giám sát quan trọng nhất đối với hoạt động của Nhà nước là ai?",
-    "type": "MC",
-    "options": [
-      "A. Đảng",
-      "B. Quốc hội",
-      "C. Nhân dân",
-      "D. Mặt trận Tổ quốc"
-    ],
-    "correct_answer": "C"
-  },
-  {
-    "id": 54,
-    "content": "Trong tư tưởng Hồ Chí Minh, dân chủ và kỷ luật có mối quan hệ như thế nào?",
-    "type": "MC",
-    "options": [
-      "A. Dân chủ phải đi đôi với kỷ luật nghiêm minh",
-      "B. Dân chủ càng nhiều thì càng ít cần kỷ luật",
-      "C. Kỷ luật càng nghiêm thì càng hạn chế dân chủ",
-      "D. Dân chủ và kỷ luật không liên quan"
-    ],
-    "correct_answer": "A"
-  },
-  {
-    "id": 55,
-    "content": "Hồ Chí Minh nhấn mạnh muốn nhân dân thật sự làm chủ thì phải làm gì?",
-    "type": "MC",
-    "options": [
-      "A. Nâng cao trình độ, năng lực làm chủ cho nhân dân",
-      "B. Tăng cường tuyên truyền khẩu hiệu",
-      "C. Tăng số lượng cán bộ",
-      "D. Mở rộng bộ máy nhà nước"
-    ],
-    "correct_answer": "A"
-  },
-  {
-    "id": 56,
-    "content": "Nhà nước Việt Nam Dân chủ Cộng hòa được Hồ Chí Minh xác định là Nhà nước theo phương châm nào?",
-    "type": "MC",
-    "options": [
-      "A. Của dân, do dân, vì dân",
-      "B. Của Đảng, do Đảng, vì Đảng",
-      "C. Của Nhà nước, do Nhà nước, vì Nhà nước",
-      "D. Của công nông, do công nông, vì công nông"
-    ],
-    "correct_answer": "A"
-  },
-  {
-    "id": 57,
-    "content": "Hồ Chí Minh yêu cầu cán bộ phải giữ mối liên hệ như thế nào với nhân dân?",
-    "type": "MC",
-    "options": [
-      "A. Gần dân, hiểu dân, học dân, giúp dân",
-      "B. Chỉ đạo dân",
-      "C. Quản lý chặt dân",
-      "D. Giữ khoảng cách với dân"
-    ],
-    "correct_answer": "A"
-  },
-  {
-    "id": 58,
-    "content": "Theo Hồ Chí Minh, một biểu hiện nguy hiểm của bệnh quan liêu là gì?",
-    "type": "MC",
-    "options": [
-      "A. Xa dân, coi thường dân",
-      "B. Làm việc chậm",
-      "C. Nghỉ trưa dài",
-      "D. Không họp hành"
-    ],
-    "correct_answer": "A"
-  },
-  {
-    "id": 59,
-    "content": "Cuộc Tổng tuyển cử năm 1946 được tổ chức theo nguyên tắc nào?",
-    "type": "MC",
-    "options": [
-      "A. Phổ thông đầu phiếu, trực tiếp và bỏ phiếu kín",
-      "B. Bầu cử gián tiếp",
-      "C. Bầu theo đẳng cấp",
-      "D. Bầu theo ngành nghề"
-    ],
-    "correct_answer": "A"
-  },
-  {
-    "id": 60,
-    "content": "Theo Hồ Chí Minh, nhân dân có quyền gì đối với đại biểu Quốc hội và Hội đồng nhân dân không còn xứng đáng với tín nhiệm của mình?",
-    "type": "MC",
-    "options": [
-      "A. Bãi miễn",
-      "B. Khiển trách",
-      "C. Phạt tiền",
-      "D. Không bỏ phiếu lần sau"
-    ],
-    "correct_answer": "A"
-  },
-  {
-    "id": 61,
-    "content": " “Đảng có vững, cách mệnh mới thành công, cũng như người cầm lái có vững thuyền mới _______. ”(4 chữ)",
-    "type": "text",
-    "correct_answer": "chạy"
-  },
-  {
-    "id": 62,
-    "content": " “Đảng mà không có chủ nghĩa cũng như người không có _______. ” (7 chữ)",
-    "type": "text",
-    "correct_answer": "trí khôn"
-  },
-  {
-    "id": 63,
-    "content": " “Đảng ta là đạo đức, là _______. (7 chữ)”",
-    "type": "text",
-    "correct_answer": "văn minh"
-  },
-  {
-    "id": 64,
-    "content": " Tham ô, lãng phí, quan liêu là giặc _______ đối với chế độ ta. (6 chữ)",
-    "type": "text",
-    "correct_answer": "nội xâm"
-  },
-  {
-    "id": 65,
-    "content": " “Kỷ luật của Đảng là kỷ luật _______.” (6 chữ)",
-    "type": "text",
-    "correct_answer": "tự giác"
-  },
-  {
-    "id": 66,
-    "content": " Hồ Chí Minh khẳng định “Cán bộ là gốc của mọi _______.” (8 chữ)",
-    "type": "text",
-    "correct_answer": "công việc"
-  },
-  {
-    "id": 67,
-    "content": " “Nước ta là nước dân chủ, nghĩa là nước nhà do _______ làm chủ.” (7 chữ)",
-    "type": "text",
-    "correct_answer": "nhân dân"
-  },
-  {
-    "id": 68,
-    "content": " Nhà nước ta là Nhà nước của dân, do dân, _______ dân. (2 chữ)",
-    "type": "text",
-    "correct_answer": "vì"
-  },
-  {
-    "id": 69,
-    "content": " Đảng viên phải có đủ bốn đức: cần, kiệm, liêm, _______, chí công vô tư. (5 chữ)",
+    "content": "Kháng chiến phải toàn dân, toàn diện, lâu dài và dựa vào sức mình là _______.",
     "type": "text",
     "correct_answer": "chính"
   },
   {
-    "id": 70,
-    "content": " Đảng vừa là người lãnh đạo, vừa là người _______ trung thành của nhân dân.(5 chữ)",
+    "id": 46,
+    "content": "Ngày 12/12/1946, Trung ương Đảng ra Chỉ thị Toàn dân _______.",
     "type": "text",
-    "correct_answer": "đầy tớ"
+    "correct_answer": "kháng chiến"
   },
   {
-    "id": 71,
-    "content": " Hồ Chí Minh coi đoàn kết là “truyền thống cực kỳ _______ của Đảng và dân tộc ta”. (6 chữ)",
+    "id": 47,
+    "content": "Hội nghị Ban Thường vụ Trung ương Đảng ngày 18/12/1946 họp tại làng _______ (Hà Đông).",
     "type": "text",
-    "correct_answer": "quý báu"
+    "correct_answer": "vạn phúc"
   },
   {
-    "id": 72,
-    "content": " Để chống chủ nghĩa cá nhân, phải tăng cường giáo dục đạo đức _______. (8 chữ)",
+    "id": 48,
+    "content": "Lời kêu gọi toàn quốc kháng chiến được Chủ tịch Hồ Chí Minh ban hành ngày 19/12/_____.",
     "type": "text",
-    "correct_answer": "cách mạng"
+    "correct_answer": "1946"
   },
   {
-    "id": 73,
-    "content": " “Việc gì có lợi cho dân thì hết sức làm, việc gì có hại cho dân thì hết sức _______.”(5 chữ)",
+    "id": 49,
+    "content": "Pháo đài _______ bắn loạt đại bác đầu tiên báo hiệu cuộc kháng chiến ở Hà Nội.",
     "type": "text",
-    "correct_answer": "tránh"
+    "correct_answer": "láng"
   },
   {
-    "id": 74,
-    "content": " Hồ Chí Minh gọi tiếng nói của nhân dân là truyền lại “ý _______”. (4 chữ)",
+    "id": 51,
+    "content": "Ngày 15/10/1947, Ban Thường vụ Trung ương ra Chỉ thị phải phá tan cuộc tấn công mùa đông của giặc _______.",
     "type": "text",
-    "correct_answer": "trời"
+    "correct_answer": "pháp"
   },
   {
-    "id": 75,
-    "content": " Trong Nhà nước dân chủ, cán bộ từ trên xuống dưới đều là _______ của dân. (5 chữ)",
+    "id": 52,
+    "content": "Tư tưởng chỉ đạo chiến lược của Đảng là trường kỳ _______.",
     "type": "text",
-    "correct_answer": "đầy tớ"
+    "correct_answer": "kháng chiến"
   },
   {
-    "id": 76,
-    "content": " Trong Di chúc, Người căn dặn phải giữ gìn sự đoàn kết nhất trí của Đảng như giữ gìn con ngươi của _______.(7 chữ)",
+    "id": 53,
+    "content": "Kháng chiến lâu dài nhằm từng bước chuyển hóa từ yếu thành _______.",
     "type": "text",
-    "correct_answer": "mắt mình"
+    "correct_answer": "mạnh"
   },
   {
-    "id": 77,
-    "content": " Hồ Chí Minh khẳng định “Dân là _______ của nước”. (3 chữ)",
+    "id": 54,
+    "content": "Kháng chiến dựa vào sức mình là chính lấy _______ dân tộc làm chỗ dựa chủ yếu.",
     "type": "text",
-    "correct_answer": "gốc"
+    "correct_answer": "nội lực"
   },
   {
-    "id": 78,
-    "content": " Tham ô, lãng phí và bệnh quan liêu là bạn đồng minh của thực dân và _______. (9 chữ)",
+    "id": 57,
+    "content": "Ngày 11/6/1948, Chủ tịch Hồ Chí Minh ra Lời kêu gọi Thi đua _______.",
     "type": "text",
-    "correct_answer": "phong kiến"
+    "correct_answer": "ái quốc"
   },
   {
-    "id": 79,
-    "content": " “Muôn việc thành công hoặc thất bại đều do cán bộ tốt hoặc _______.” (3 chữ)",
+    "id": 58,
+    "content": "Hội nghị Văn hóa toàn quốc (7/1948) xác định nền văn hóa mới: dân tộc, khoa học, _______.",
     "type": "text",
-    "correct_answer": "kém"
+    "correct_answer": "đại chúng"
   },
   {
-    "id": 80,
-    "content": " “Chế độ ta là chế độ dân chủ, tư tưởng phải được _______.” (4 chữ)",
+    "id": 59,
+    "content": "Ngày 1/10/1949, nước Cộng hòa nhân dân _______ ra đời.",
     "type": "text",
-    "correct_answer": "tự do"
+    "correct_answer": "trung hoa"
   },
   {
-    "id": 81,
-    "content": " Nhân dân thực hiện quyền lực nhà nước của mình thông qua Quốc hội và Hội đồng nhân dân do mình trực tiếp _______. (5 chữ)",
+    "id": 61,
+    "content": "Tháng 11/1949, Chủ tịch Hồ Chí Minh ký sắc lệnh về nghĩa vụ _______.",
     "type": "text",
-    "correct_answer": "bầu ra"
+    "correct_answer": "quân sự"
   },
   {
-    "id": 82,
-    "content": " Tổng tuyển cử bầu Quốc hội khóa I được tổ chức theo chế độ phổ thông _______. (8 chữ)",
+    "id": 64,
+    "content": "Ngày 19/3/1950, hơn 500.000 người dân Sài Gòn biểu tình chống _______.",
     "type": "text",
-    "correct_answer": "đầu phiếu"
+    "correct_answer": "mỹ"
   },
   {
-    "id": 83,
-    "content": " Hiến pháp là đạo luật _______ của Nhà nước. (5 chữ)",
+    "id": 65,
+    "content": "Tháng 6/1950, Ban Thường vụ Trung ương quyết định mở Chiến dịch _______ Thu - Đông 1950.",
     "type": "text",
-    "correct_answer": "cơ bản"
+    "correct_answer": "biên giới"
   },
   {
-    "id": 84,
-    "content": " Pháp quyền nhân nghĩa trước hết là tôn trọng và bảo đảm các _______ của con người. (5 chữ)",
+    "id": 66,
+    "content": "Chiến dịch Biên giới Thu - Đông diễn ra từ ngày 16/9 đến ngày 17/10/_____.",
     "type": "text",
-    "correct_answer": "quyền"
+    "correct_answer": "1950"
   },
   {
-    "id": 85,
-    "content": " Theo Hồ Chí Minh, cán bộ có chức quyền mà thiếu _______ thì dễ sinh tham ô, lãng phí. (8 chữ)",
+    "id": 68,
+    "content": "Mục tiêu của kháng chiến là giành độc lập, tự do và thống nhất _______.",
     "type": "text",
-    "correct_answer": "lương tâm"
+    "correct_answer": "hoàn toàn"
   },
   {
-    "id": 86,
-    "content": " Mọi người phải “sống và làm việc theo _______ và pháp luật”. (8 chữ)",
+    "id": 69,
+    "content": "Đường lối kháng chiến trở thành ngọn cờ dẫn đường và được toàn dân _______ ứng.",
     "type": "text",
-    "correct_answer": "Hiến pháp"
-  },
-  {
-    "id": 87,
-    "content": " Hồ Chí Minh yêu cầu mỗi đảng viên phải thường xuyên “tự _______ và phê bình”. (7 chữ)",
-    "type": "text",
-    "correct_answer": "phê bình"
-  },
-  {
-    "id": 88,
-    "content": " Nguyên tắc tổ chức cơ bản của Đảng là _______ dân chủ. (8 chữ)",
-    "type": "text",
-    "correct_answer": "tập trung"
-  },
-  {
-    "id": 89,
-    "content": " Dân chủ phải đi đôi với _______ thì mới có dân chủ thật sự. (6 chữ)",
-    "type": "text",
-    "correct_answer": "kỷ luật"
-  },
-  {
-    "id": 90,
-    "content": " Khi xa rời nhân dân, Đảng sẽ mất _______ của dân. (7 chữ)",
-    "type": "text",
-    "correct_answer": "lòng tin"
-  },
-  {
-    "id": 91,
-    "content": " Nhà nước ta dựa trên nền tảng liên minh công-nông, do giai cấp _______ lãnh đạo. (8 chữ)",
-    "type": "text",
-    "correct_answer": "công nhân"
-  },
-  {
-    "id": 92,
-    "content": " Trong Yêu sách của nhân dân An Nam, Hồ Chí Minh đòi thay chế độ ra sắc lệnh bằng chế độ ra _______. (7 chữ)",
-    "type": "text",
-    "correct_answer": "đạo luật"
-  },
-  {
-    "id": 93,
-    "content": " “Trăm điều phải có thần linh _______” – Hồ Chí Minh khẳng định vai trò tối thượng của pháp luật. (9 chữ)",
-    "type": "text",
-    "correct_answer": "pháp quyền"
-  },
-  {
-    "id": 94,
-    "content": " Hồ Chí Minh cho rằng muốn làm chủ được tốt, nhân dân phải có _______ làm chủ. (7 chữ)",
-    "type": "text",
-    "correct_answer": "năng lực"
-  },
-  {
-    "id": 95,
-    "content": " Một biểu hiện suy thoái đạo đức được Hồ Chí Minh phê phán gay gắt là chủ nghĩa _______. (6 chữ)",
-    "type": "text",
-    "correct_answer": "cá nhân"
-  },
-  {
-    "id": 96,
-    "content": " Trong bộ máy Nhà nước, bệnh quan liêu dẫn đến coi thường _______ của nhân dân. (8 chữ)",
-    "type": "text",
-    "correct_answer": "quyền lợi"
-  },
-  {
-    "id": 97,
-    "content": " Để củng cố đoàn kết trong Đảng, Hồ Chí Minh coi phê bình và _______ là quy luật phát triển. (9 chữ)",
-    "type": "text",
-    "correct_answer": "tự phê bình"
-  },
-  {
-    "id": 98,
-    "content": " Hồ Chí Minh yêu cầu cán bộ phải “gần dân, hiểu dân, học dân và _______ dân”. (4 chữ)",
-    "type": "text",
-    "correct_answer": "giúp"
-  },
-  {
-    "id": 99,
-    "content": " Dân chủ được Người coi là “chìa khóa vạn _______” để phát huy sức mạnh nhân dân. (4 chữ)",
-    "type": "text",
-    "correct_answer": "năng"
-  },
-  {
-    "id": 100,
-    "content": " Hồ Chí Minh cho rằng muốn dân tin Đảng, cán bộ phải “nói ít, làm _______”. (5 chữ)",
-    "type": "text",
-    "correct_answer": "nhiều"
+    "correct_answer": "hưởng"
   }
 ]

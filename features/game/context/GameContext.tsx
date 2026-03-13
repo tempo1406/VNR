@@ -4,6 +4,11 @@ import React, { createContext, useContext, useReducer, useEffect, useCallback } 
 import { GameState, Question, FeedbackType } from '@/types/game';
 import questionsData from '../data/questions.json';
 
+const STAGE1_QUESTION_COUNT = 10;
+const STAGE2_QUESTION_COUNT = 5;
+const STAGE1_TARGET_PIECES = 10;
+const STAGE2_TARGET_PIECES = 15;
+
 interface GameContextType {
   state: GameState;
   startGame: () => void;
@@ -54,9 +59,10 @@ function gameReducer(state: GameState, action: GameAction): GameState {
       };
 
     case 'ANSWER_CORRECT': {
-      // Stage 1: collect up to 14 pieces (0-13)
-      // Stage 2: collect up to 18 pieces total (14-17)
-      const maxPiecesForStage = state.stage === 1 ? 14 : 18;
+      // Stage 1: collect up to 10 pieces (0-9)
+      // Stage 2: collect up to 15 pieces total (10-14)
+      const maxPiecesForStage =
+        state.stage === 1 ? STAGE1_TARGET_PIECES : STAGE2_TARGET_PIECES;
       const currentTotalPieces = state.collectedPieces.length;
 
       // Only add piece if we haven't reached the max for this stage
@@ -81,15 +87,8 @@ function gameReducer(state: GameState, action: GameAction): GameState {
       };
 
     case 'NEXT_QUESTION': {
-      // Check if already have enough pieces for current stage
-      const requiredPieces = state.stage === 1 ? 14 : 18;
-
-      // Don't go to next question if already have enough pieces
-      if (state.collectedPieces.length >= requiredPieces) {
-        return state; // Stop asking questions
-      }
-
-      // No limit on number of questions - keep going until enough pieces
+      // Advance question index. Stage transition is controlled in GamePage
+      // based on stage question limits (10 for stage 1, 5 for stage 2).
       return {
         ...state,
         currentQuestionIndex: state.currentQuestionIndex + 1,
@@ -161,15 +160,14 @@ export function GameProvider({ children }: { children: React.ReactNode }) {
   }, []);
 
   const startGame = useCallback(() => {
-    // Stage 1: Shuffle all MC questions
-    // Stage 2: Shuffle all text questions
-    // No need to specify count - just shuffle and use as needed
-    const mcQuestions = shuffleQuestions('MC');
-    const textQuestions = shuffleQuestions('text');
+    // Stage 1: 10 MC questions
+    // Stage 2: 5 fill-in questions
+    const mcQuestions = shuffleQuestions('MC').slice(0, STAGE1_QUESTION_COUNT);
+    const textQuestions = shuffleQuestions('text').slice(0, STAGE2_QUESTION_COUNT);
     const allQuestions = [...mcQuestions, ...textQuestions];
 
-    // Random select image from 1-16
-    const randomImageId = Math.floor(Math.random() * 16) + 1;
+    // Random select image from 1-4 for stage 3 puzzle
+    const randomImageId = Math.floor(Math.random() * 4) + 1;
 
     dispatch({ type: 'START_GAME', payload: { questions: allQuestions, imageId: randomImageId } });
   }, [shuffleQuestions]);
@@ -185,9 +183,19 @@ export function GameProvider({ children }: { children: React.ReactNode }) {
 
     if (!currentQuestion) return null;
 
-    // Normalize: trim, lowercase, and replace multiple spaces with single space
-    const normalizedAnswer = answer.trim().toLowerCase().replace(/\s+/g, ' ');
-    const normalizedCorrect = currentQuestion.correct_answer.trim().toLowerCase().replace(/\s+/g, ' ');
+    // Normalize input to make fill-in answers more tolerant:
+    // lowercase + remove accents + remove punctuation + collapse spaces
+    const normalizeText = (value: string) =>
+      value
+        .trim()
+        .toLowerCase()
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '')
+        .replace(/[^\p{L}\p{N}\s]/gu, ' ')
+        .replace(/\s+/g, ' ');
+
+    const normalizedAnswer = normalizeText(answer);
+    const normalizedCorrect = normalizeText(currentQuestion.correct_answer);
 
     if (normalizedAnswer === normalizedCorrect) {
       dispatch({ type: 'ANSWER_CORRECT' });

@@ -1,5 +1,5 @@
-import Content1Page from '@/features/content1/Content1Page';
+import DuongLoiContentPage from "@/features/contents/DuongLoiContentPage";
 
 export default function Page() {
-  return <Content1Page />;
+  return <DuongLoiContentPage sectionNumber={1} />;
 }

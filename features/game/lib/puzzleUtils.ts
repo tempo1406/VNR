@@ -1,8 +1,8 @@
 import { PuzzlePiece } from '@/types/game';
 
 export const GRID_ROWS = 3;
-export const GRID_COLS = 6;
-export const TOTAL_PIECES = GRID_ROWS * GRID_COLS; // 18
+export const GRID_COLS = 5;
+export const TOTAL_PIECES = GRID_ROWS * GRID_COLS; // 15
 
 export function calculatePiecePosition(pieceId: number): { row: number; col: number } {
   const row = Math.floor(pieceId / GRID_COLS);

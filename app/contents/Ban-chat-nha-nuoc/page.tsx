@@ -1,5 +1,5 @@
-import Content4Page from "@/features/content4/Content4Page";
+import DuongLoiContentPage from "@/features/contents/DuongLoiContentPage";
 
 export default function Content4Route() {
-  return <Content4Page />;
+  return <DuongLoiContentPage sectionNumber={4} />;
 }
