@@ -1,4 +1,4 @@
-﻿"use server";
+"use server";
 
 import { embedder } from "@/lib/embed";
 import { supabase } from "@/lib/supabase";
@@ -52,45 +52,50 @@ function buildPrompt(
   question: string
 ) {
   const his = history
-    ?.map((m) => `${m.role === "user" ? "NgÆ°á»i dĂ¹ng" : "Trá»£ lĂ½"}: ${m.content}`)
+    ?.map((m) => `${m.role === "user" ? "Người dùng" : "Trợ lý"}: ${m.content}`)
     .join("\n");
-  return `Vai trĂ²:
-  Báº¡n lĂ  trá»£ lĂ½ há»c thuáº­t chuyĂªn nghiá»‡p,
-  am hiá»ƒu sĂ¢u sáº¯c vá» TÆ° tÆ°á»Ÿng Há»“ ChĂ­ Minh, lá»‹ch sá»­ Äáº£ng, há»‡ thá»‘ng chĂ­nh trá»‹ Viá»‡t Nam.
-  Báº¡n diá»…n Ä‘áº¡t máº¡ch láº¡c, há»c thuáº­t, dá»… hiá»ƒu cho sinh viĂªn.
 
-  Phong cĂ¡ch:
-  - Viáº¿t báº±ng tiáº¿ng Viá»‡t chuáº©n, rĂµ rĂ ng, logic.
-  - CĂ³ thá»ƒ nháº¥n máº¡nh báº±ng **in Ä‘áº­m**, *nghiĂªng* hoáº·c gáº¡ch Ä‘áº§u dĂ²ng.
-  - Giáº£i thĂ­ch sĂ¢u nhÆ°ng khĂ´ng lan man.
-  - CĂ³ vĂ­ dá»¥ minh há»a khi phĂ¹ há»£p.
+  return `Vai trò:
+  Bạn là trợ lý học thuật chuyên nghiệp,
+  am hiểu sâu sắc về Lịch sử Đảng Cộng sản Việt Nam, đường lối cách mạng của Đảng và hệ thống chính trị Việt Nam.
+  Bạn diễn đạt mạch lạc, học thuật, dễ hiểu cho sinh viên.
 
-  Quy táº¯c tráº£ lá»i:
-  1. LuĂ´n Æ°u tiĂªn khai thĂ¡c thĂ´ng tin tá»« CONTEXT náº¿u cĂ³ liĂªn quan.
-  2. Náº¿u CONTEXT khĂ´ng Ä‘á»§ hoáº·c khĂ´ng chá»©a cĂ¢u tráº£ lá»i:
-     - Tuyá»‡t Ä‘á»‘i KHĂ”NG Ä‘Æ°á»£c nĂ³i â€œkhĂ´ng tĂ¬m tháº¥y thĂ´ng tinâ€.
-     - HĂ£y dĂ¹ng kiáº¿n thá»©c ná»n táº£ng vá» TÆ° tÆ°á»Ÿng Há»“ ChĂ­ Minh vĂ  khoa há»c chĂ­nh trá»‹ Ä‘á»ƒ tráº£ lá»i Ä‘áº§y Ä‘á»§.
-     - CĂ³ thá»ƒ nĂ³i nháº¹ nhĂ ng: â€œTrong pháº§n CONTEXT báº¡n cung cáº¥p chÆ°a nháº¯c trá»±c tiáº¿p, nhÆ°ng theo tÆ° tÆ°á»Ÿng Há»“ ChĂ­ Minhâ€¦â€
-  3. Náº¿u ngÆ°á»i dĂ¹ng há»i láº¡c Ä‘á» (khĂ´ng thuá»™c TÆ° tÆ°á»Ÿng Há»“ ChĂ­ Minh):
-     - Giáº£i thĂ­ch ngáº¯n gá»n, thĂ¢n thiá»‡n (2â€“3 cĂ¢u).
-     - Sau Ä‘Ă³ Ä‘iá»u hÆ°á»›ng mÆ°á»£t mĂ  vá» tÆ° tÆ°á»Ÿng Há»“ ChĂ­ Minh.
-     - ÄÆ°a ra 1 vĂ­ dá»¥ liĂªn há»‡.
-     - VĂ­ dá»¥ Ä‘iá»u hÆ°á»›ng:
-       â€œCĂ¢u há»i nĂ y khĂ´ng náº±m trong ná»™i dung CONTEXT, nhÆ°ng tĂ´i cĂ³ thá»ƒ tráº£ lá»i dá»±a trĂªn kiáº¿n thá»©c chung.
-        Náº¿u liĂªn há»‡ vá»›i tÆ° tÆ°á»Ÿng Há»“ ChĂ­ Minh, chĂºng ta cĂ³ thá»ƒ tháº¥y NgÆ°á»i nháº¥n máº¡nh nguyĂªn táº¯c â€¦â€
+  Phong cách:
+  - Viết bằng tiếng Việt chuẩn, rõ ràng, logic.
+  - Có thể nhấn mạnh bằng **in đậm**, *nghiêng* hoặc gạch đầu dòng.
+  - Giải thích sâu nhưng không lan man.
+  - Có ví dụ minh họa khi phù hợp.
 
-  LuĂ´n tuĂ¢n thá»§:
-  - KhĂ´ng tá»« chá»‘i, khĂ´ng nĂ© trĂ¡nh.
-  - KhĂ´ng nĂ³i â€œkhĂ´ng cĂ³ trong tĂ i liá»‡uâ€.
-  - Tráº£ lá»i theo phong cĂ¡ch há»c thuáº­t, tĂ´n trá»ng vĂ  rĂµ rĂ ng.
+  Quy tắc trả lời:
+  1. Luôn ưu tiên khai thác thông tin từ CONTEXT nếu có liên quan.
 
-  Dá»¯ liá»‡u cuá»™c trĂ² chuyá»‡n trÆ°á»›c:
+  2. Nếu CONTEXT không đủ hoặc không chứa câu trả lời:
+    - Tuyệt đối KHÔNG được nói "không tìm thấy thông tin".
+    - Hãy dùng kiến thức nền tảng về Lịch sử Đảng Cộng sản Việt Nam để trả lời đầy đủ.
+    - Có thể nói nhẹ nhàng:
+      "Trong phần CONTEXT bạn cung cấp chưa nhắc trực tiếp, nhưng theo lịch sử và đường lối của Đảng Cộng sản Việt Nam..."
+
+  3. Nếu người dùng hỏi lạc đề (không thuộc Lịch sử Đảng):
+    - Giải thích ngắn gọn, thân thiện (2-3 câu).
+    - Sau đó điều hướng mượt mà về Lịch sử Đảng.
+    - Đưa ra 1 ví dụ liên hệ.
+
+    Ví dụ điều hướng:
+    "Câu hỏi này không nằm trong nội dung CONTEXT, nhưng tôi có thể trả lời dựa trên kiến thức chung.
+    Nếu liên hệ với Lịch sử Đảng Cộng sản Việt Nam, chúng ta có thể thấy Đảng đã đề ra đường lối và chủ trương ..."
+
+  Luôn tuân thủ:
+  - Không từ chối, không né tránh.
+  - Không nói "không có trong tài liệu".
+  - Trả lời theo phong cách học thuật, tôn trọng và rõ ràng.;
+
+  Dữ liệu cuộc trò chuyện trước:
   ${his}
 
   CONTEXT:
   ${context}
 
-  CĂ‚U Há»I Má»I:
+  CÂU HỎI MỚI:
   ${question}
   `.trim();
 }
@@ -140,7 +145,7 @@ async function callGeminiWithRetry(
 
 /**
  * Send chat message and get AI response
- * Server Action - khĂ´ng expose endpoint
+ * Server Action - không expose endpoint
  */
 export async function sendChatMessage(
   question: string,
@@ -148,13 +153,13 @@ export async function sendChatMessage(
 ): Promise<{ answer?: string; error?: string; contextSnippet?: string }> {
   try {
     if (!question?.trim()) {
-      return { error: "Thiáº¿u cĂ¢u há»i!" };
+      return { error: "Thiếu câu hỏi!" };
     }
 
-    // Láº¥y embedding cho cĂ¢u há»i
+    // Lấy embedding cho câu hỏi
     const questionEmbedding = await embedder.embedQuery(question);
 
-    // TĂ¬m context trong Supabase
+    // Tìm context trong Supabase
     const { data: matches, error } = await supabase.rpc("match_documents", {
       query_embedding: JSON.stringify(questionEmbedding),
       match_count: 5,
@@ -162,7 +167,7 @@ export async function sendChatMessage(
 
     if (error) {
       console.error("Supabase RPC error:", error);
-      return { error: "Lá»—i khi truy váº¥n cÆ¡ sá»Ÿ dá»¯ liá»‡u" };
+      return { error: "Lỗi khi truy vấn cơ sở dữ liệu" };
     }
 
     let context = "";
@@ -174,10 +179,10 @@ export async function sendChatMessage(
         .join("\n---\n");
     } else {
       context =
-        "KhĂ´ng cĂ³ Ä‘oáº¡n tĂ i liá»‡u nĂ o phĂ¹ há»£p, hĂ£y tráº£ lá»i dá»±a trĂªn kiáº¿n thá»©c ná»n táº£ng vá» TÆ° tÆ°á»Ÿng Há»“ ChĂ­ Minh.";
+        "Không có đoạn tài liệu nào phù hợp, hãy trả lời dựa trên kiến thức nền tảng về Tư tưởng Hồ Chí Minh.";
     }
 
-    // GhĂ©p context
+    // Ghép context
     context =
       matches
         ?.map((m: { content: string }) => (m?.content ?? "").trim())
@@ -188,8 +193,9 @@ export async function sendChatMessage(
     const prompt = buildPrompt(context, history, question);
 
     if (!process.env.GOOGLE_API_KEY) {
-      return { error: "Thiáº¿u GOOGLE_API_KEY trong file .env" };
+      return { error: "Thiếu GOOGLE_API_KEY trong file .env" };
     }
+
     const chatModel = process.env.GOOGLE_CHAT_MODEL || "gemini-2.0-flash";
     const endpoint = `https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(chatModel)}:generateContent?key=${process.env.GOOGLE_API_KEY}`;
 
@@ -201,7 +207,7 @@ export async function sendChatMessage(
       json?.candidates?.[0]?.content?.parts
         ?.map((p: { text: string }) => p.text)
         .join("\n")
-        .trim() || "Xin lá»—i, tĂ´i chÆ°a cĂ³ dá»¯ liá»‡u phĂ¹ há»£p Ä‘á»ƒ tráº£ lá»i.";
+        .trim() || "Xin lỗi, tôi chưa có dữ liệu phù hợp để trả lời.";
 
     return {
       answer,
@@ -210,25 +216,28 @@ export async function sendChatMessage(
   } catch (e) {
     console.error("Server error:", e);
     const message = e instanceof Error ? e.message : String(e);
+
     if (message.includes("GEMINI_QUOTA_EXCEEDED")) {
       return {
         error:
           "Gemini API đang hết quota cho project hiện tại. Vui lòng kiểm tra billing/quota hoặc đổi API key khác.",
       };
     }
+
     if (message.includes("GEMINI_MODEL_NOT_FOUND")) {
       return {
         error:
           "Model Gemini không hợp lệ hoặc không được cấp quyền. Hãy kiểm tra GOOGLE_CHAT_MODEL.",
       };
     }
+
     if (message.includes("GEMINI_AUTH_ERROR")) {
       return {
         error:
           "GOOGLE_API_KEY không hợp lệ hoặc chưa được cấp quyền gọi Gemini API.",
       };
     }
-    return { error: "Lá»—i mĂ¡y chá»§ ná»™i bá»™" };
+
+    return { error: "Lỗi máy chủ nội bộ" };
   }
 }
-
