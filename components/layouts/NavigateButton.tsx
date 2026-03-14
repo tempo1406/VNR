@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Home, Gamepad2, BookOpen, Bot } from "lucide-react";
+import { Home, Gamepad2, BookOpen, Bot, Map } from "lucide-react";
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 
@@ -14,6 +14,7 @@ const NavigateButton = () => {
   const routes = [
     { name: "Trang chủ", path: "/", icon: Home },
     { name: "Game", path: "/game", icon: Gamepad2 },
+    { name: "Bản đồ", path: "/ban-do-khang-chien", icon: Map },
     { name: "Tài liệu", path: "/tai-lieu", icon: BookOpen },
     { name: "Used AI", path: "/used-ai", icon: Bot },
   ];
@@ -170,3 +171,4 @@ const NavigateButton = () => {
 };
 
 export default NavigateButton;
+
