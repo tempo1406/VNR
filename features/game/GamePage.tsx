@@ -207,7 +207,7 @@ export default function GamePage() {
   };
 
   return (
-    <>
+    <div data-disable-text-explainer>
       {renderStage()}
       <PlayerNameModal
         isOpen={showPlayerNameModal}
@@ -222,6 +222,6 @@ export default function GamePage() {
         isOpen={showLeaderboard}
         onClose={handleCloseLeaderboard}
       />
-    </>
+    </div>
   );
 }

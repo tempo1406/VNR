@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import {
   useCallback,
@@ -15,6 +15,7 @@ import {
   VIETNAM_VIEWBOX_WIDTH,
   projectLonLatToSvgPoint,
   type MapQuiz,
+  vietnamArchipelagoGroups,
   vietnamOutlinePath,
 } from "@/features/campaign-map/data/campaignMapData";
 
@@ -509,7 +510,7 @@ const CampaignMapPage = () => {
           <h1 className="campaign-title">Khám phá bản đồ Việt Nam qua các mốc lịch sử tương tác</h1>
           <p className="campaign-subtitle">
             Bấm vào từng địa điểm để xem sự kiện, ảnh minh họa, mô tả ngắn và câu hỏi mini. Trả lời
-            đúng để mở huy hiệu và giải khóa bí mật lịch sử.
+            đúng để mở huy hiệu và giải mã bí mật lịch sử.
           </p>
         </section>
 
@@ -634,7 +635,20 @@ const CampaignMapPage = () => {
                 <svg className="vietnam-outline" viewBox="0 0 1000 1600" aria-hidden>
                   <path className="vietnam-outline-fill" d={vietnamOutlinePath} />
                   <path className="vietnam-outline-stroke" d={vietnamOutlinePath} />
-
+                  {vietnamArchipelagoGroups.map((group) => (
+                    <g key={group.id} className="archipelago-group">
+                      <path
+                        className="archipelago-connector"
+                        d={`M ${group.label.x} ${group.label.y + 10} `}
+                      />
+                      {group.dots.map((dot, index) => (
+                        <circle key={`${group.id}-${index}`} className="island-dot" cx={dot.x} cy={dot.y} r={dot.r ?? 2.2} />
+                      ))}
+                      <text className="island-label" x={group.label.x} y={group.label.y} textAnchor="middle">
+                        {group.name}
+                      </text>
+                    </g>
+                  ))}
                 </svg>
 
                 <div className="map-overlay" />
@@ -727,7 +741,7 @@ const CampaignMapPage = () => {
                   <p className="location-summary">{selectedLocation.shortDescription}</p>
                 </div>
 
-                <div className="detail-block">
+                <div className="detail-block" data-disable-text-explainer>
                   <h3>Câu hỏi mini</h3>
                   <p className="location-summary">
                     Câu {selectedQuizStep + 1}/{selectedQuizPool.length}
@@ -808,5 +822,9 @@ const CampaignMapPage = () => {
 };
 
 export default CampaignMapPage;
+
+
+
+
 
 

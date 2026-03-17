@@ -1,6 +1,6 @@
-import { useState, useEffect, useRef } from "react";
+﻿import { useState, useEffect, useRef } from "react";
 import { useChat } from "@/providers/ChatProvider";
-import { useAutoSendMode } from "./useAutoSendMode";
+import { useTextExplainerMode } from "./useTextExplainerMode";
 
 export function useChatUI() {
   const {
@@ -17,7 +17,8 @@ export function useChatUI() {
     closeChat,
   } = useChat();
 
-  const { isAutoSendEnabled, toggleAutoSend } = useAutoSendMode();
+  const { isTextExplainerEnabled, toggleTextExplainer } =
+    useTextExplainerMode();
 
   const [inputValue, setInputValue] = useState("");
   const [isHistoryOpen, setIsHistoryOpen] = useState(false);
@@ -25,11 +26,11 @@ export function useChatUI() {
 
   const currentSession = sessions.find((s) => s.id === currentSessionId);
 
-  // Clear input when AI finishes responding
   useEffect(() => {
     if (prevLoadingRef.current && !isLoading) {
-      // Was loading, now finished
-      setInputValue("");
+      queueMicrotask(() => {
+        setInputValue("");
+      });
     }
     prevLoadingRef.current = isLoading;
   }, [isLoading]);
@@ -59,14 +60,11 @@ export function useChatUI() {
   };
 
   return {
-    // State
     inputValue,
     setInputValue,
     isHistoryOpen,
     setIsHistoryOpen,
     currentSession,
-
-    // From provider
     sessions,
     currentSessionId,
     setCurrentSessionId,
@@ -75,12 +73,8 @@ export function useChatUI() {
     isChatOpen,
     toggleChat,
     closeChat,
-
-    // Auto-send mode
-    isAutoSendEnabled,
-    toggleAutoSend,
-
-    // Handlers
+    isTextExplainerEnabled,
+    toggleTextExplainer,
     handleSend,
     handleNewChat,
     handleDeleteSession,

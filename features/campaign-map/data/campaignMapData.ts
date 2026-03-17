@@ -127,6 +127,37 @@ export const vietnamOutlinePath =
   restOutlinePoints.map((point) => ` L ${point.x} ${point.y}`).join("") +
   " Z";
 
+export interface VietnamArchipelagoGroup {
+  id: string;
+  name: string;
+  label: {
+    x: number;
+    y: number;
+  };
+  dots: Array<{
+    x: number;
+    y: number;
+    r?: number;
+  }>;
+}
+
+export const vietnamArchipelagoGroups: VietnamArchipelagoGroup[] = [
+  {
+    id: "hoang-sa",
+    name: "Hoàng Sa",
+    label: { x: 846, y: 680 },
+    dots: [{ x: 846, y: 720, r: 10 }]
+
+  },
+  {
+    id: "truong-sa",
+    name: "Trường Sa",
+    label: { x: 1000, y: 1198 },
+    dots: [{ x: 1000, y: 1238, r: 10 }]
+
+  }
+];
+
 export const campaignLocations: MapLocation[] = [
   {
     id: "ha-noi",

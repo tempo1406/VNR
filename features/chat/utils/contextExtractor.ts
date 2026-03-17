@@ -1,8 +1,5 @@
-/**
- * Extract context around selected text
- * @param selectedText - The text that was selected
- * @param contextChars - Number of characters to include before and after (default: 200)
- * @returns Object with extended context and page metadata
+﻿/**
+ * Extract context around selected text.
  */
 export function extractTextContext(
   selectedText: string,
@@ -15,20 +12,18 @@ export function extractTextContext(
   pageTitle: string;
   pageContent: string;
 } {
-  // Get page title from data-page-title attribute or h1
   const titleElement =
     document.querySelector("[data-page-title]") || document.querySelector("h1");
   const pageTitle = titleElement?.textContent?.trim() || "";
 
-  // Get main content from data-page-content or main element
   const contentElement =
     document.querySelector("[data-page-content]") ||
     document.querySelector("main") ||
     document.body;
 
   const pageContent = contentElement?.textContent?.trim() || "";
+  const safePageContent = pageContent.substring(0, 500);
 
-  // Find the selected text in the page content
   const selection = window.getSelection();
   if (!selection || selection.rangeCount === 0) {
     return {
@@ -37,65 +32,71 @@ export function extractTextContext(
       contextAfter: "",
       fullContext: selectedText,
       pageTitle,
-      pageContent: "",
+      pageContent: safePageContent,
     };
   }
 
   const range = selection.getRangeAt(0);
   const container = range.commonAncestorContainer;
 
-  // Get the full text of the container
   let fullText = "";
   let startOffset = 0;
 
   if (container.nodeType === Node.TEXT_NODE) {
-    // If it's a text node, get parent element's text
     const parentElement = container.parentElement;
     if (parentElement) {
       fullText = parentElement.textContent || "";
-      // Find where our text node starts in the parent
-      const walker = document.createTreeWalker(
-        parentElement,
-        NodeFilter.SHOW_TEXT
-      );
-      let currentNode;
+
+      const walker = document.createTreeWalker(parentElement, NodeFilter.SHOW_TEXT);
+      let currentNode: Node | null;
       while ((currentNode = walker.nextNode())) {
         if (currentNode === container) {
           break;
         }
         startOffset += currentNode.textContent?.length || 0;
       }
+
       startOffset += range.startOffset;
     }
   } else {
-    // If it's an element node
     fullText = container.textContent || "";
-    startOffset = range.startOffset;
+    startOffset = Math.max(0, range.startOffset);
   }
 
-  // Calculate positions
-  const selectedStart = fullText.indexOf(selectedText, startOffset);
-  const selectedEnd = selectedStart + selectedText.length;
+  const normalizedStart = Math.max(0, startOffset);
+  let selectedStart = fullText.indexOf(selectedText, normalizedStart);
 
-  // Extract context before and after
+  if (selectedStart === -1) {
+    selectedStart = fullText.indexOf(selectedText);
+  }
+
+  if (selectedStart === -1) {
+    return {
+      selectedText,
+      contextBefore: "",
+      contextAfter: "",
+      fullContext: selectedText,
+      pageTitle,
+      pageContent: safePageContent,
+    };
+  }
+
+  const selectedEnd = selectedStart + selectedText.length;
   const contextStart = Math.max(0, selectedStart - contextChars);
   const contextEnd = Math.min(fullText.length, selectedEnd + contextChars);
 
   let contextBefore = fullText.substring(contextStart, selectedStart).trim();
   let contextAfter = fullText.substring(selectedEnd, contextEnd).trim();
 
-  // Add ellipsis if truncated
-  if (contextStart > 0) contextBefore = "..." + contextBefore;
-  if (contextEnd < fullText.length) contextAfter = contextAfter + "...";
-
-  const fullContext = `${contextBefore} **${selectedText}** ${contextAfter}`;
+  if (contextStart > 0) contextBefore = `...${contextBefore}`;
+  if (contextEnd < fullText.length) contextAfter = `${contextAfter}...`;
 
   return {
     selectedText,
     contextBefore,
     contextAfter,
-    fullContext,
+    fullContext: `${contextBefore} **${selectedText}** ${contextAfter}`.trim(),
     pageTitle,
-    pageContent: pageContent.substring(0, 500), // Limit page content to 500 chars
+    pageContent: safePageContent,
   };
 }

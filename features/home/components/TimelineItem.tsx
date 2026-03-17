@@ -1,9 +1,9 @@
-"use client";
+﻿"use client";
 
 import { PostType } from "@/common/types/post.type";
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
-import { Calendar, ExternalLink, ArrowRight } from "lucide-react";
+import { Calendar, ArrowRight } from "lucide-react";
 import Link from "next/link";
 
 interface TimelineItemProps {
@@ -24,7 +24,6 @@ export const TimelineItem: React.FC<TimelineItemProps> = ({
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      // Animate card from side
       if (cardRef.current) {
         gsap.fromTo(
           cardRef.current,
@@ -46,7 +45,6 @@ export const TimelineItem: React.FC<TimelineItemProps> = ({
         );
       }
 
-      // Animate circle from center (scale up)
       if (circleRef.current) {
         gsap.fromTo(
           circleRef.current,
@@ -70,85 +68,75 @@ export const TimelineItem: React.FC<TimelineItemProps> = ({
       }
     });
 
-    return () => ctx.revert(); // Cleanup
+    return () => ctx.revert();
   }, [isEven]);
 
   return (
     <div
       ref={itemRef}
-      className={`relative flex items-center mb-12 ${
+      className={`relative mb-12 flex items-center ${
         isEven ? "flex-row" : "flex-row-reverse"
       }`}
     >
-      {/* Content Card */}
       <div
         ref={cardRef}
-        className={`w-5/12 ${isEven ? "text-right pr-8" : "text-left pl-8"}`}
+        className={`w-5/12 ${isEven ? "pr-8 text-right" : "pl-8 text-left"}`}
       >
-        <Link
-          href={`${linkPrefix}/${post.slug}`}
-          className="block group bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 hover:border-amber-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-amber-500/20 cursor-pointer"
-        >
-          {/* Milestone Badge */}
+        <div className="group rounded-2xl border border-white/20 bg-white/10 p-6 backdrop-blur-md transition-all duration-300 hover:border-amber-500/50 hover:shadow-2xl hover:shadow-amber-500/20">
           <div
-            className={`flex items-center gap-2 mb-3 ${
+            className={`mb-3 flex items-center gap-2 ${
               isEven ? "justify-end" : "justify-start"
             }`}
           >
-            <Calendar className="w-4 h-4 text-amber-400" />
-            <span className="text-amber-400 font-bold text-sm">
-              {post.milestone}
-            </span>
+            <Calendar className="h-4 w-4 text-amber-400" />
+            <span className="text-sm font-bold text-amber-400">{post.milestone}</span>
           </div>
 
-          {/* Title */}
-          <h3 className="text-xl font-bold text-white mb-3 group-hover:text-amber-300 transition-colors">
+          <h3 className="mb-3 select-text text-xl font-bold text-white transition-colors group-hover:text-amber-300">
             {post.title}
           </h3>
 
-          {/* Short Description */}
           {post.shortDescription && (
-            <p className="text-white/80 text-sm leading-relaxed mb-4">
+            <p className="mb-4 select-text text-sm leading-relaxed text-white/80">
               {post.shortDescription}
             </p>
           )}
 
-          {/* Image */}
           {post.image && post.image.length > 0 && (
-            <div className="mb-4 overflow-hidden rounded-lg bg-amber-900/20">
+            <div className="mb-4 overflow-hidden rounded-lg border border-white/10 bg-amber-950/25 p-3">
               <img
                 src={post.image[0]}
                 alt={post.title}
-                className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
+                className="h-48 w-full object-contain transition-transform duration-500 group-hover:scale-[1.03]"
                 loading="lazy"
                 crossOrigin="anonymous"
               />
             </div>
           )}
 
-          {/* Read More Button */}
           <div
             className={`flex items-center gap-2 ${
               isEven ? "justify-end" : "justify-start"
             }`}
           >
-            <span className="text-amber-300 text-sm font-medium group-hover:text-amber-200 transition-colors">
-              Xem chi tiết
-            </span>
-            <ArrowRight className="w-4 h-4 text-amber-300 group-hover:translate-x-1 transition-transform" />
+            <Link
+              href={`${linkPrefix}/${post.slug}`}
+              className="group inline-flex items-center gap-2 rounded-full border border-amber-500/30 bg-amber-600/10 px-4 py-2 text-sm font-medium text-amber-300 transition-all duration-300 hover:border-amber-400/60 hover:bg-amber-500/15 hover:text-amber-200"
+            >
+              <span>Xem chi tiết</span>
+              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+            </Link>
           </div>
-        </Link>
+        </div>
       </div>
 
-      {/* Center Circle Node */}
-      <div className="w-2/12 flex justify-center relative z-10">
+      <div className="relative z-10 flex w-2/12 justify-center">
         <div
           ref={circleRef}
-          className="w-6 h-6 bg-amber-500 rounded-full border-4 border-amber-900/40 shadow-lg shadow-amber-500/50 group-hover:scale-125 transition-transform duration-300"
+          className="h-6 w-6 rounded-full border-4 border-amber-900/40 bg-amber-500 shadow-lg shadow-amber-500/50 transition-transform duration-300"
         />
       </div>
 
-      {/* Empty space on other side */}
       <div className="w-5/12" />
     </div>
   );

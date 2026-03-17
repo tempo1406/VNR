@@ -47,7 +47,7 @@ const TimelineDetailPage: React.FC<TimelineDetailPageProps> = ({ post }) => {
           className="inline-flex items-center gap-2 text-white/80 hover:text-white mb-8 transition-colors group"
         >
           <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
-          Quay lại Timeline
+          Quay lại dòng thời gian
         </Link>
 
         {/* Header */}
@@ -61,7 +61,10 @@ const TimelineDetailPage: React.FC<TimelineDetailPageProps> = ({ post }) => {
           </div>
 
           {/* Title */}
-          <h1 className="text-5xl font-bold text-white mb-4 leading-tight">
+          <h1
+            data-page-title
+            className="mb-4 select-text text-5xl font-bold leading-tight text-white"
+          >
             {post.title}
           </h1>
 
@@ -83,60 +86,63 @@ const TimelineDetailPage: React.FC<TimelineDetailPageProps> = ({ post }) => {
         <div ref={contentRef} className="bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 overflow-hidden">
           {/* Image */}
           {post.image && post.image.length > 0 && (
-            <div className="w-full h-96 overflow-hidden">
+            <div className="w-full h-96 overflow-hidden bg-amber-950/25 p-4">
               <img
                 src={post.image[0]}
                 alt={post.title}
-                className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                className="w-full h-full object-contain hover:scale-[1.02] transition-transform duration-500"
               />
             </div>
           )}
 
           {/* Content */}
           <div className="p-8">
-            <div className="prose prose-invert prose-lg max-w-none">
+            <div
+              data-page-content
+              className="prose prose-invert prose-lg max-w-none select-text"
+            >
               <ReactMarkdown
                 remarkPlugins={[remarkGfm]}
                 components={{
                   h2: ({ children }) => (
-                    <h2 className="text-3xl font-bold text-white mt-8 mb-4 border-b border-amber-500/30 pb-2">
+                    <h2 className="mt-8 mb-4 select-text border-b border-amber-500/30 pb-2 text-3xl font-bold text-white">
                       {children}
                     </h2>
                   ),
                   h3: ({ children }) => (
-                    <h3 className="text-2xl font-semibold text-white mt-6 mb-3">
+                    <h3 className="mt-6 mb-3 select-text text-2xl font-semibold text-white">
                       {children}
                     </h3>
                   ),
                   p: ({ children }) => (
-                    <p className="text-white/90 text-lg leading-relaxed mb-4">
+                    <p className="mb-4 select-text text-lg leading-relaxed text-white/90">
                       {children}
                     </p>
                   ),
                   ul: ({ children }) => (
-                    <ul className="list-disc list-inside space-y-2 mb-4 text-white/90">
+                    <ul className="mb-4 list-inside list-disc space-y-2 select-text text-white/90">
                       {children}
                     </ul>
                   ),
                   li: ({ children }) => (
-                    <li className="text-white/90 leading-relaxed ml-4">
+                    <li className="ml-4 select-text leading-relaxed text-white/90">
                       {children}
                     </li>
                   ),
                   blockquote: ({ children }) => (
-                    <blockquote className="border-l-4 border-amber-500 pl-4 py-2 my-6 bg-amber-900/20 rounded-r-lg">
-                      <div className="text-amber-200 italic text-xl">
+                    <blockquote className="my-6 select-text rounded-r-lg border-l-4 border-amber-500 bg-amber-900/20 py-2 pl-4">
+                      <div className="select-text text-xl italic text-amber-200">
                         {children}
                       </div>
                     </blockquote>
                   ),
                   strong: ({ children }) => (
-                    <strong className="text-amber-300 font-bold">
+                    <strong className="select-text font-bold text-amber-300">
                       {children}
                     </strong>
                   ),
                   em: ({ children }) => (
-                    <em className="text-amber-200 italic">
+                    <em className="select-text italic text-amber-200">
                       {children}
                     </em>
                   ),
@@ -183,7 +189,7 @@ const TimelineDetailPage: React.FC<TimelineDetailPageProps> = ({ post }) => {
                       <img
                         src={img}
                         alt={`${post.title} - ${idx + 2}`}
-                        className="w-full h-48 object-cover hover:scale-105 transition-transform duration-500"
+                        className="w-full h-48 object-contain bg-amber-950/25 p-2 hover:scale-[1.02] transition-transform duration-500"
                       />
                     </div>
                   ))}

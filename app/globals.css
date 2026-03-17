@@ -311,8 +311,8 @@ html.lenis body {
   margin: 0.65rem 0 0;
   line-height: 1.06;
   font-size: clamp(1.7rem, 3.8vw, 3.3rem);
-  max-width: 19ch;
-  text-wrap: balance;
+  max-width: none;
+  white-space: nowrap;
 }
 
 .campaign-subtitle {
@@ -706,8 +706,34 @@ html.lenis body {
   filter: drop-shadow(0 0 8px rgba(245, 158, 11, 0.35));
 }
 
+.archipelago-group {
+  pointer-events: none;
+}
+
+.archipelago-connector {
+  fill: none;
+  stroke: rgba(253, 230, 138, 0.42);
+  stroke-width: 1;
+  stroke-dasharray: 5 5;
+}
+
 .island-dot {
-  fill: rgba(253, 230, 138, 0.85);
+  fill: rgba(253, 230, 138, 0.88);
+  stroke: rgba(120, 53, 15, 0.78);
+  stroke-width: 0.7;
+  filter: drop-shadow(0 0 4px rgba(245, 158, 11, 0.28));
+}
+
+.island-label {
+  fill: #fde68a;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  paint-order: stroke;
+  stroke: rgba(13, 10, 7, 0.82);
+  stroke-width: 3px;
+  stroke-linejoin: round;
 }
 
 .map-overlay {
