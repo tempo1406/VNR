@@ -1,10 +1,11 @@
 ﻿"use client";
 
 import { PostType } from "@/common/types/post.type";
+import { posts } from "@/common/constants/posts";
 import Link from "next/link";
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
-import { Calendar, ExternalLink, ArrowLeft } from "lucide-react";
+import { Calendar, ExternalLink, ArrowLeft, ArrowRight } from "lucide-react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import AudioPlayer from "@/components/AudioPlayer";
@@ -17,6 +18,9 @@ const TimelineDetailPage: React.FC<TimelineDetailPageProps> = ({ post }) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const headerRef = useRef<HTMLDivElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
+  const currentIndex = posts.findIndex((item) => item.slug === post.slug);
+  const previousPost = currentIndex > 0 ? posts[currentIndex - 1] : null;
+  const nextPost = currentIndex >= 0 && currentIndex < posts.length - 1 ? posts[currentIndex + 1] : null;
 
   useEffect(() => {
     // Animate header
@@ -197,6 +201,32 @@ const TimelineDetailPage: React.FC<TimelineDetailPageProps> = ({ post }) => {
               </div>
             )}
           </div>
+        </div>
+
+        <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+          {previousPost ? (
+            <Link
+              href={`/timeline/${previousPost.slug}`}
+              className="inline-flex items-center gap-2 rounded-xl border border-white/20 bg-white/10 px-4 py-3 text-white/90 transition-all hover:border-amber-500/50 hover:text-amber-200"
+            >
+              <ArrowLeft className="h-4 w-4" />
+              <span className="font-medium">Mốc trước: {previousPost.title}</span>
+            </Link>
+          ) : (
+            <div />
+          )}
+
+          {nextPost ? (
+            <Link
+              href={`/timeline/${nextPost.slug}`}
+              className="inline-flex items-center gap-2 rounded-xl border border-white/20 bg-white/10 px-4 py-3 text-white/90 transition-all hover:border-amber-500/50 hover:text-amber-200 sm:justify-end"
+            >
+              <span className="font-medium">Mốc kế tiếp: {nextPost.title}</span>
+              <ArrowRight className="h-4 w-4" />
+            </Link>
+          ) : (
+            <div />
+          )}
         </div>
       </div>
     </div>
