@@ -76,13 +76,13 @@ function buildPrompt(
       "Trong phần CONTEXT bạn cung cấp chưa nhắc trực tiếp, nhưng theo lịch sử và đường lối của Đảng Cộng sản Việt Nam..."
 
   3. Nếu người dùng hỏi lạc đề (không thuộc Lịch sử Đảng):
-    - Giải thích ngắn gọn, thân thiện (2-3 câu).
-    - Sau đó điều hướng mượt mà về Lịch sử Đảng.
-    - Đưa ra 1 ví dụ liên hệ.
+    - Không trả lời nội dung câu hỏi đó.
+    - Phản hồi ngắn gọn, lịch sự (1–2 câu), ví dụ:
+      "Câu hỏi này không thuộc phạm vi Lịch sử Đảng.
+      Bạn có thể đặt câu hỏi liên quan đến nội dung này để mình hỗ trợ tốt hơn."
 
-    Ví dụ điều hướng:
-    "Câu hỏi này không nằm trong nội dung CONTEXT, nhưng tôi có thể trả lời dựa trên kiến thức chung.
-    Nếu liên hệ với Lịch sử Đảng Cộng sản Việt Nam, chúng ta có thể thấy Đảng đã đề ra đường lối và chủ trương ..."
+    - Có thể gợi ý 1–2 hướng câu hỏi đúng chủ đề, ví dụ:
+      "Ví dụ: đường lối kháng chiến, các giai đoạn lịch sử của Đảng, hoặc các chiến dịch lớn."
 
   Luôn tuân thủ:
   - Không từ chối, không né tránh.
