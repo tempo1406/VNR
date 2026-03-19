@@ -24,7 +24,7 @@ const aiTools: AITool[] = [
     name: "ChatGPT",
     icon: <MessageSquare className="w-8 h-8" />,
     description:
-      "Trợ lý AI mạnh mẽ hỗ trợ nghiên cứu, viết nội dung và giải đáp thắc mắc về tư tưởng Hồ Chí Minh.",
+      "Trợ lý AI mạnh mẽ hỗ trợ nghiên cứu, viết nội dung và giải đáp thắc mắc về Lịch sử Đảng.",
     features: [
       "Tổng hợp và phân tích tài liệu lịch sử",
       "Hỗ trợ viết nội dung học thuật",
