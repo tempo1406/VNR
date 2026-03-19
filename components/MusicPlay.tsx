@@ -96,32 +96,6 @@ const MusicPlay = () => {
   return (
     <div className="fixed top-6 left-6 z-50">
       <div className="relative flex items-center gap-3">
-        {/* Main button */}
-        <button
-          ref={buttonRef}
-          onClick={togglePlay}
-          className={`relative flex items-center justify-center w-14 h-14 rounded-full transition-all duration-300 ${
-            isPlaying
-              ? "bg-gradient-to-br from-amber-500/60 to-amber-600/60 shadow-lg shadow-amber-500/40"
-              : "bg-gradient-to-br from-amber-800/40 to-amber-900/40 hover:from-amber-700/50 hover:to-amber-800/50"
-          } backdrop-blur-md border border-amber-700/30`}
-          title={isPlaying ? "Tạm dừng nhạc" : "Phát nhạc"}
-        >
-          {isPlaying ? (
-            <Music
-              ref={iconRef}
-              className="w-6 h-6 text-amber-100"
-              strokeWidth={2}
-            />
-          ) : (
-            <Music2
-              ref={iconRef}
-              className="w-6 h-6 text-amber-400/60"
-              strokeWidth={2}
-            />
-          )}
-        </button>
-
         {/* Wave bars - only show when playing */}
         {isPlaying && (
           <div className="flex items-center gap-1 h-8">

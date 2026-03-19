@@ -55,21 +55,20 @@ const aiTools: AITool[] = [
     features: [
       "Phân tích sâu tài liệu giáo trình",
       "Tổng hợp kiến thức từ nhiều nguồn",
-      "Tạo video AI tóm tắt nội dung",
       "Trích xuất thông tin quan trọng",
       "Hỏi đáp dựa trên tài liệu",
     ],
     link: "https://notebooklm.google.com",
   },
   {
-    name: "Cursor",
+    name: "Codex",
     icon: <Code className="w-8 h-8" />,
     description:
       "Trình soạn thảo code tích hợp AI, hỗ trợ lập trình viên viết code nhanh hơn với khả năng hiểu ngữ cảnh dự án và gợi ý thông minh.",
     features: [
       "Code completion thông minh với AI",
     ],
-    link: "https://cursor.sh",
+    link: "https://chatgpt.com/codex",
   },
 ];
 
