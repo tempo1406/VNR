@@ -6,6 +6,7 @@ export type PostType = {
   shortDescription?: string;
   content: string;
   image?: string[];
+  imageCaptions?: string[];
   linkResource?: string[];
   milestone: string;
 };

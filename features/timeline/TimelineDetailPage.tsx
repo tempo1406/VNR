@@ -3,9 +3,9 @@
 import { PostType } from "@/common/types/post.type";
 import { posts } from "@/common/constants/posts";
 import Link from "next/link";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
-import { Calendar, ExternalLink, ArrowLeft, ArrowRight } from "lucide-react";
+import { Calendar, ExternalLink, ArrowLeft, ArrowRight, X } from "lucide-react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import AudioPlayer from "@/components/AudioPlayer";
@@ -21,6 +21,22 @@ const TimelineDetailPage: React.FC<TimelineDetailPageProps> = ({ post }) => {
   const currentIndex = posts.findIndex((item) => item.slug === post.slug);
   const previousPost = currentIndex > 0 ? posts[currentIndex - 1] : null;
   const nextPost = currentIndex >= 0 && currentIndex < posts.length - 1 ? posts[currentIndex + 1] : null;
+  const imageCaptions = post.imageCaptions || [];
+  const relatedImages = post.image?.slice(1) || [];
+  const [selectedImage, setSelectedImage] = useState<{
+    src: string;
+    title: string;
+  } | null>(null);
+
+  const getImageTitle = (imageIndex: number) =>
+    imageCaptions[imageIndex] || `${post.title} - Hình ${imageIndex + 1}`;
+
+  const openImageDialog = (src: string, imageIndex: number) => {
+    setSelectedImage({
+      src,
+      title: getImageTitle(imageIndex),
+    });
+  };
 
   useEffect(() => {
     // Animate header
@@ -90,12 +106,20 @@ const TimelineDetailPage: React.FC<TimelineDetailPageProps> = ({ post }) => {
         <div ref={contentRef} className="bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 overflow-hidden">
           {/* Image */}
           {post.image && post.image.length > 0 && (
-            <div className="w-full h-96 overflow-hidden bg-amber-950/25 p-4">
-              <img
-                src={post.image[0]}
-                alt={post.title}
-                className="w-full h-full object-contain hover:scale-[1.02] transition-transform duration-500"
-              />
+            <div className="w-full bg-amber-950/25 p-4">
+              <div className="h-96 overflow-hidden">
+                <img
+                  src={post.image[0]}
+                  alt={post.title}
+                  className="h-full w-full cursor-zoom-in object-contain transition-transform duration-500 hover:scale-[1.02]"
+                  onClick={() => openImageDialog(post.image![0], 0)}
+                />
+              </div>
+              {imageCaptions[0] && (
+                <p className="mt-3 text-center text-sm text-white/85">
+                  {imageCaptions[0]}
+                </p>
+              )}
             </div>
           )}
 
@@ -182,19 +206,31 @@ const TimelineDetailPage: React.FC<TimelineDetailPageProps> = ({ post }) => {
             )}
 
             {/* Additional Images */}
-            {post.image && post.image.length > 1 && (
+            {relatedImages.length > 0 && (
               <div className="mt-8 pt-6 border-t border-white/20">
                 <h3 className="text-xl font-semibold text-white mb-4">
                   Hình ảnh liên quan
                 </h3>
-                <div className="grid grid-cols-2 gap-4">
-                  {post.image.slice(1).map((img, idx) => (
+                <div
+                  className={
+                    relatedImages.length === 1
+                      ? "mx-auto max-w-2xl"
+                      : "grid grid-cols-2 gap-4"
+                  }
+                >
+                  {relatedImages.map((img, idx) => (
                     <div key={idx} className="overflow-hidden rounded-lg">
                       <img
                         src={img}
                         alt={`${post.title} - ${idx + 2}`}
-                        className="w-full h-48 object-contain bg-amber-950/25 p-2 hover:scale-[1.02] transition-transform duration-500"
+                        className="h-48 w-full cursor-zoom-in object-contain bg-amber-950/25 p-2 transition-transform duration-500 hover:scale-[1.02]"
+                        onClick={() => openImageDialog(img, idx + 1)}
                       />
+                      {imageCaptions[idx + 1] && (
+                        <p className="mt-2 text-center text-sm text-white/85">
+                          {imageCaptions[idx + 1]}
+                        </p>
+                      )}
                     </div>
                   ))}
                 </div>
@@ -229,6 +265,35 @@ const TimelineDetailPage: React.FC<TimelineDetailPageProps> = ({ post }) => {
           )}
         </div>
       </div>
+
+      {selectedImage && (
+        <div
+          className="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 p-4 backdrop-blur-sm"
+          onClick={() => setSelectedImage(null)}
+        >
+          <div
+            className="relative w-full max-w-5xl rounded-2xl border border-white/25 bg-stone-950/95 p-4"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              className="absolute right-3 top-3 rounded-full bg-white/10 p-2 text-white transition-colors hover:bg-white/20"
+              onClick={() => setSelectedImage(null)}
+              aria-label="Đóng xem ảnh"
+            >
+              <X className="h-4 w-4" />
+            </button>
+
+            <img
+              src={selectedImage.src}
+              alt={selectedImage.title}
+              className="max-h-[75vh] w-full object-contain"
+            />
+            <p className="mt-3 text-center text-base font-medium text-white/90">
+              {selectedImage.title}
+            </p>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
