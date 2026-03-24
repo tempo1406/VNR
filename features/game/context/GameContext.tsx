@@ -102,6 +102,11 @@ function gameReducer(state: GameState, action: GameAction): GameState {
         stage: (state.stage === 1 ? 2 : 3) as GameState['stage'],
         currentQuestionIndex: 0,
         attempts: 0,
+        // Always unlock the full 15-piece puzzle when entering stage 3
+        collectedPieces:
+          state.stage === 2
+            ? Array.from({ length: STAGE2_TARGET_PIECES }, (_, index) => index)
+            : state.collectedPieces,
       };
 
     case 'TICK_TIMER':
