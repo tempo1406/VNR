@@ -263,6 +263,21 @@ const CampaignMapPage = () => {
   const globalSecretUnlocked = claimedSecrets.length >= 4;
   const finalSecretUnlocked = claimedSecrets.length >= campaignLocations.length;
 
+  const openSecretModal = useCallback((level: "level-1" | "level-2") => {
+    if (level === "level-2") {
+      setSecretModal({
+        title: "Hồ sơ bí mật cấp 2",
+        content: GLOBAL_SECRET_FINAL_CONTENT,
+      });
+      return;
+    }
+
+    setSecretModal({
+      title: "Hồ sơ bí mật cấp 1",
+      content: GLOBAL_SECRET_LEVEL_ONE_CONTENT,
+    });
+  }, []);
+
   const badgeRules = useMemo(
     () => [
       {
@@ -432,15 +447,9 @@ const CampaignMapPage = () => {
         setClaimedSecrets((prev) => [...prev, selectedLocation.id]);
 
         if (nextClaimedCount === campaignLocations.length) {
-          setSecretModal({
-            title: "Hồ sơ bí mật cấp 2",
-            content: GLOBAL_SECRET_FINAL_CONTENT,
-          });
+          openSecretModal("level-2");
         } else if (nextClaimedCount === 4) {
-          setSecretModal({
-            title: "Hồ sơ bí mật cấp 1",
-            content: GLOBAL_SECRET_LEVEL_ONE_CONTENT,
-          });
+          openSecretModal("level-1");
         }
       }
       return;
@@ -573,7 +582,22 @@ const CampaignMapPage = () => {
           </div>
 
           <div className="secret-grid">
-            <article className={`secret-card ${globalSecretUnlocked ? "open" : "closed"}`}>
+            <article
+              className={`secret-card ${globalSecretUnlocked ? "open clickable" : "closed"}`}
+              role={globalSecretUnlocked ? "button" : undefined}
+              tabIndex={globalSecretUnlocked ? 0 : -1}
+              onClick={globalSecretUnlocked ? () => openSecretModal("level-1") : undefined}
+              onKeyDown={
+                globalSecretUnlocked
+                  ? (event) => {
+                      if (event.key === "Enter" || event.key === " ") {
+                        event.preventDefault();
+                        openSecretModal("level-1");
+                      }
+                    }
+                  : undefined
+              }
+            >
               <div className="secret-card-head">
                 <strong>
                   <Sparkles size={15} /> Hồ sơ bí mật cấp 1
@@ -587,7 +611,22 @@ const CampaignMapPage = () => {
               </p>
             </article>
 
-            <article className={`secret-card ${finalSecretUnlocked ? "open" : "closed"}`}>
+            <article
+              className={`secret-card ${finalSecretUnlocked ? "open clickable" : "closed"}`}
+              role={finalSecretUnlocked ? "button" : undefined}
+              tabIndex={finalSecretUnlocked ? 0 : -1}
+              onClick={finalSecretUnlocked ? () => openSecretModal("level-2") : undefined}
+              onKeyDown={
+                finalSecretUnlocked
+                  ? (event) => {
+                      if (event.key === "Enter" || event.key === " ") {
+                        event.preventDefault();
+                        openSecretModal("level-2");
+                      }
+                    }
+                  : undefined
+              }
+            >
               <div className="secret-card-head">
                 <strong>
                   <Sparkles size={15} /> Hồ sơ bí mật cấp 2
@@ -808,6 +847,11 @@ const CampaignMapPage = () => {
       {secretModal ? (
         <div className="secret-modal-backdrop" role="dialog" aria-modal="true">
           <div className="secret-modal-card">
+            <div className="secret-modal-glow" aria-hidden>
+              <span />
+              <span />
+              <span />
+            </div>
             <p className="secret-modal-kicker">Hồ sơ vừa mở khóa</p>
             <h3>{secretModal.title}</h3>
             <p>{secretModal.content}</p>
